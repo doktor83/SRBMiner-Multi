@@ -1,0 +1,36 @@
+SRBMiner-MULTI CPU & AMD GPU Miner
+
+===========================================
+SUPPORTED ALGORITHMS:
+===========================================
+
+[CPU ONLY]
+
++ cpupower			[~0.85%]
++ yescryptr16		[~0.85%]
++ yescryptr32		[~0.85%]
++ yescryptr8		[~0.85%]
++ yespower			[~0.85%]
++ yespowerlitb		[~0.85%]
++ yespowerr16		[~0.85%]
+
+[CPU & GPU]
+
++ blake2b			[~0.00%]
++ blake2s			[~0.85%]
++ keccak			[~0.85%]
++ mtp				[~0.85%]
++ rainforestv2		[~1.70%]
++ yescrypt			[~0.85%]
+
+
+
+===========================================
+SUPPORTED GPU'S:
+===========================================
+
++ VEGA 56/64/FE/VII
++ RX 460/470/480/550/560/570/580/590
++ R9 285/285X/380/380X
++ R9 290/290X
++ R9 Fury/Nano
