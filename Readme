@@ -19,27 +19,27 @@ SUPPORTED ALGORITHMS:
 
 [CPU ONLY]
 
-+ cpupower		[~0.85%]
++ cpupower			[~0.85%]
 + yescryptr16		[~0.85%]
 + yescryptr32		[~0.85%]
 + yescryptr8		[~0.85%]
-+ yespower		[~0.85%]
++ yespower			[~0.85%]
 + yespower2b		[~0.85%]
-+ yespowerlitb	[~0.85%]
-+ yespowerltncg	[~0.85%]
++ yespowerlitb		[~0.85%]
++ yespowerltncg		[~0.85%]
 + yespowerr16		[~0.85%]
-+ yespowersugar	[~0.85%]
++ yespowersugar		[~0.85%]
 + yespowerurx		[~0.00%]
 
 [CPU & GPU]
 
-+ blake2b		[~0.00%]
-+ blake2s		[~0.85%]
-+ eaglesong		[~0.85%]
-+ keccak		[~0.85%]
-+ mtp			[~0.85%]
-+ rfv2		[~1.70%]
-+ yescrypt		[~0.85%]
++ blake2b			[~0.00%]
++ blake2s			[~0.85%]
++ eaglesong			[~0.85%]
++ keccak			[~0.85%]
++ mtp				[~0.85%]
++ rfv2				[~1.70%]
++ yescrypt			[~0.85%]
 
 
 
