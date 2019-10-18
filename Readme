@@ -13,33 +13,37 @@ https://bitcointalk.org/index.php?topic=5190081.0
 
 
 
+DevFee  : ~0.85%
+NoFee	: blake2b, yespowerurx
+
 ===========================================
 SUPPORTED ALGORITHMS:
 ===========================================
 
 [CPU ONLY]
 
-+ cpupower		[~0.85%]
-+ yescryptr16		[~0.85%]
-+ yescryptr32		[~0.85%]
-+ yescryptr8		[~0.85%]
-+ yespower		[~0.85%]
-+ yespower2b		[~0.85%]
-+ yespowerlitb		[~0.85%]
-+ yespowerltncg		[~0.85%]
-+ yespowerr16		[~0.85%]
-+ yespowersugar		[~0.85%]
-+ yespowerurx		[~0.00%]
++ cpupower
++ yescryptr16
++ yescryptr32
++ yescryptr8
++ yespower
++ yespower2b
++ yespowerlitb
++ yespowerltncg
++ yespowerr16
++ yespowersugar
++ yespowerurx
 
 [CPU & GPU]
 
-+ blake2b		[~0.00%]
-+ blake2s		[~0.85%]
-+ eaglesong		[~0.85%]
-+ keccak		[~0.85%]
-+ mtp			[~0.85%]
-+ rfv2			[~1.70%]
-+ yescrypt		[~0.85%]
++ blake2b
++ blake2s
++ eaglesong
++ k12
++ keccak
++ mtp
++ rfv2
++ yescrypt
 
 
 
