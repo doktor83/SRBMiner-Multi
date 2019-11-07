@@ -23,6 +23,10 @@ SUPPORTED ALGORITHMS:
 [CPU ONLY]
 
 + cpupower
++ randomarq
++ randomwow
++ randomx
++ randomxl
 + yescryptr16
 + yescryptr32
 + yescryptr8
@@ -42,7 +46,7 @@ SUPPORTED ALGORITHMS:
 + k12
 + keccak
 + mtp
-+ rfv2
++ rainforestv2
 + yescrypt
 
 
