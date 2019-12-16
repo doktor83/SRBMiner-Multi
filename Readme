@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.1.7 beta
+SRBMiner-MULTI CPU & AMD GPU Miner 0.1.9 beta
 -----------------------------------------
 
 Download :
@@ -24,6 +24,7 @@ SUPPORTED ALGORITHMS:
 
 + cpupower
 + randomarq
++ randomsfx
 + randomwow
 + randomx
 + randomxl
