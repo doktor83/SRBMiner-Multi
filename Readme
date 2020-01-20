@@ -1,5 +1,7 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.1.9 beta
+SRBMiner-MULTI CPU & AMD GPU Miner 0.3.0
 -----------------------------------------
+DevFee  : ~0.85%
+NoFee	: blake2b, yespowerurx
 
 Download :
 https://www.srbminer.com/download.html
@@ -12,10 +14,6 @@ https://discord.gg/zXY23De
 https://bitcointalk.org/index.php?topic=5190081.0
 
 
-
-DevFee  : ~0.85%
-NoFee	: blake2b, yespowerurx
-
 ===========================================
 SUPPORTED ALGORITHMS:
 ===========================================
@@ -23,13 +21,13 @@ SUPPORTED ALGORITHMS:
 [CPU ONLY]
 
 + cpupower
++ defyx
++ m7mv2
 + randomarq
 + randomsfx
-+ randomv
 + randomwow
 + randomx
 + randomxl
-+ m7mv2
 + yescryptr16
 + yescryptr32
 + yescryptr8
@@ -37,6 +35,7 @@ SUPPORTED ALGORITHMS:
 + yespower2b
 + yespoweric
 + yespoweriots
++ yespoweritc
 + yespowerlitb
 + yespowerltncg
 + yespowerr16
@@ -47,6 +46,8 @@ SUPPORTED ALGORITHMS:
 
 + blake2b
 + blake2s
++ cryptonight_catalans
++ cryptonight_talleo
 + eaglesong
 + k12
 + kadena
@@ -54,7 +55,6 @@ SUPPORTED ALGORITHMS:
 + mtp
 + rainforestv2
 + yescrypt
-
 
 
 ===========================================
