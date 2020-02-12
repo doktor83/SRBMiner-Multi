@@ -1,7 +1,5 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.3.1
+SRBMiner-MULTI CPU & AMD GPU Miner 0.3.2
 -----------------------------------------
-DevFee  : ~0.85%
-NoFee	: blake2b, yespowerurx
 
 Download :
 https://www.srbminer.com/download.html
@@ -44,6 +42,7 @@ SUPPORTED ALGORITHMS:
 
 [CPU & GPU]
 
++ bl2bsha3
 + blake2b
 + blake2s
 + cryptonight_catalans
