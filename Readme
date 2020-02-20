@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.3.4
+SRBMiner-MULTI CPU & AMD GPU Miner 0.3.5
 -----------------------------------------
 
 Download :
@@ -45,6 +45,7 @@ SUPPORTED ALGORITHMS:
 + bl2bsha3
 + blake2b
 + blake2s
++ cryptonight_bbc
 + cryptonight_catalans
 + cryptonight_talleo
 + eaglesong
@@ -65,3 +66,5 @@ SUPPORTED GPU'S:
 + R9 285/285X/380/380X
 + R9 290/290X
 + R9 Fury/Nano
+
+Linux : amdgpu-pro drivers & glibc 2.26 or newer required! (Ubuntu 18.04 and newer)
