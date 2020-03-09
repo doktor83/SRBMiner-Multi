@@ -67,4 +67,4 @@ SUPPORTED GPU'S:
 + R9 290/290X
 + R9 Fury/Nano
 
-Linux : amdgpu-pro drivers & glibc 2.26 or newer required! (Ubuntu 18.04 and newer)
+Linux : amdgpu-pro drivers required
