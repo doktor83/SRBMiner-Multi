@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.4.2
+SRBMiner-MULTI CPU & AMD GPU Miner 0.4.3
 -----------------------------------------
 
 Download :
@@ -57,6 +57,7 @@ SUPPORTED ALGORITHMS:
 + keccak
 + mtp
 + rainforestv2
++ tellor
 + yescrypt
 
 
