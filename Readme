@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.4.3
+SRBMiner-MULTI CPU & AMD GPU Miner 0.4.4
 -----------------------------------------
 
 Download :
@@ -52,12 +52,14 @@ SUPPORTED ALGORITHMS:
 + cryptonight_catalans
 + cryptonight_talleo
 + eaglesong
++ ethash
 + k12
 + kadena
 + keccak
 + mtp
 + rainforestv2
 + tellor
++ ubqhash
 + yescrypt
 
 
@@ -65,6 +67,7 @@ SUPPORTED ALGORITHMS:
 SUPPORTED GPU'S:
 ===========================================
 
++ RX 5500/5600/5700 (few algorithms only)
 + VEGA 56/64/FE/VII
 + RX 460/470/480/550/560/570/580/590
 + R9 285/285X/380/380X
