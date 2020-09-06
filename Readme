@@ -1,5 +1,7 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.4.7
+SRBMiner-MULTI CPU & AMD GPU Miner 0.5.0
 -----------------------------------------
+Mine up to 4 different algorithms/coins at the same time!
+
 
 Download :
 https://www.srbminer.com/download.html
@@ -18,57 +20,63 @@ SUPPORTED ALGORITHMS:
 
 [CPU ONLY]
 
-+ cpupower
-+ defyx
-+ m7mv2
-+ minotaur
-+ randomarq
-+ randomepic
-+ randomkeva
-+ randomsfx
-+ randomwow
-+ randomx
-+ randomxl
-+ yescryptr16
-+ yescryptr32
-+ yescryptr8
-+ yespower
-+ yespower2b
-+ yespoweric
-+ yespoweriots
-+ yespoweritc
-+ yespowerlitb
-+ yespowerltncg
-+ yespowerr16
-+ yespowerres
-+ yespowersugar
-+ yespowerurx
+[0.85%]   cpupower
+[0.00%]   m7mv2
+[2.00%]   minotaur
+[0.85%]   panthera
+[0.85%]   randomarq
+[0.85%]   randomepic
+[0.85%]   randomkeva
+[0.85%]   randomsfx
+[0.85%]   randomwow
+[0.85%]   randomx
+[0.85%]   randomxl
+[0.85%]   verushash
+[0.85%]   yescryptr16
+[0.85%]   yescryptr32
+[0.85%]   yescryptr8
+[0.85%]   yespower
+[0.85%]   yespower2b
+[0.85%]   yespoweric
+[0.85%]   yespoweriots
+[0.00%]   yespoweritc
+[0.85%]   yespowerlitb
+[0.85%]   yespowerltncg
+[0.85%]   yespowerr16
+[0.85%]   yespowerres
+[0.85%]   yespowersugar
+[0.00%]   yespowerurx
 
 [CPU & GPU]
 
-+ bl2bsha3
-+ blake2b
-+ blake2s
-+ cryptonight_bbc
-+ cryptonight_catalans
-+ cryptonight_talleo
-+ eaglesong
-+ ethash
-+ k12
-+ kadena
-+ keccak
-+ mtp
-+ rainforestv2
-+ tellor
-+ ubqhash
-+ yescrypt
+[0.85%]   bl2bsha3
+[0.00%]   blake2b
+[0.00%]   blake2s
+[2.00%]   cryptonight_bbc
+[0.00%]   cryptonight_catalans
+[0.85%]   cryptonight_ccx
+[0.85%]   cryptonight_gpu
+[0.85%]   cryptonight_heavyx
+[0.00%]   cryptonight_talleo
+[0.85%]   cryptonight_upx
+[0.85%]   cryptonight_xhv
+[0.85%]   eaglesong
+[0.85%]   ethash
+[0.85%]   k12
+[0.85%]   kadena
+[0.00%]   keccak
+[0.00%]   mtp
+[0.00%]   rainforestv2
+[0.00%]   tellor
+[0.85%]   ubqhash
+[0.85%]   yescrypt
 
 
 ===========================================
 SUPPORTED GPU'S:
 ===========================================
 
-+ RX 5500/5600/5700 (few algorithms only)
++ RX 5500/5600/5700
 + VEGA 56/64/FE/VII
 + RX 460/470/480/550/560/570/580/590
 + R9 285/285X/380/380X
