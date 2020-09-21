@@ -17,6 +17,8 @@ https://bitcointalk.org/index.php?topic=5190081.0
 SUPPORTED ALGORITHMS:
 ===========================================
 
+[Devfee]  algorithm
+
 [CPU ONLY]
 
 [0.85%]   argon2d_dynamic
