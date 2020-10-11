@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.5.3
+SRBMiner-MULTI CPU & AMD GPU Miner 0.5.4
 -----------------------------------------
 Mine up to 4 different algorithms/coins at the same time!
 
@@ -51,6 +51,7 @@ SUPPORTED ALGORITHMS:
 
 [0.85%]   argon2d_dynamic
 [0.85%]   argon2id_chukwa
+[0.85%]   argon2id_chukwa2
 [0.85%]   bl2bsha3
 [0.00%]   blake2b
 [0.00%]   blake2s
