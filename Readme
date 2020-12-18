@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.5.9
+SRBMiner-MULTI CPU & AMD GPU Miner 0.6.0
 -----------------------------------------
 Mine up to 4 different algorithms/coins at the same time!
 
@@ -71,8 +71,6 @@ SUPPORTED ALGORITHMS:
 [0.85%]   k12
 [0.85%]   kadena
 [0.00%]   keccak
-[0.00%]   rainforestv2
-[0.00%]   tellor
 [0.65%]   ubqhash
 [0.85%]   verushash
 [0.85%]   yescrypt
@@ -88,5 +86,8 @@ SUPPORTED GPU'S:
 + R9 280/280X/285/285X/380/380X
 + R9 290/290X
 + R9 Fury/Nano
+
+Experimental support:
++ RX 6500/6700/6800/6900
 
 Linux : amdgpu-pro drivers required
