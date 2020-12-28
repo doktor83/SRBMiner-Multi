@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.6.0
+SRBMiner-MULTI CPU & AMD GPU Miner 0.6.1
 -----------------------------------------
 Mine up to 4 different algorithms/coins at the same time!
 
@@ -21,6 +21,7 @@ SUPPORTED ALGORITHMS:
 
 [CPU ONLY]
 
+[0.85%]   balloon_zentoshi
 [0.85%]   cpupower
 [0.85%]   curvehash
 [0.85%]   minotaur
@@ -80,14 +81,12 @@ SUPPORTED ALGORITHMS:
 SUPPORTED GPU'S:
 ===========================================
 
++ RX 6500/6700/6800/6900
 + RX 5300/5400/5500/5600/5700
 + VEGA 56/64/FE/VII
 + RX 460/470/480/550/560/570/580/590
 + R9 280/280X/285/285X/380/380X
 + R9 290/290X
 + R9 Fury/Nano
-
-Experimental support:
-+ RX 6500/6700/6800/6900
 
 Linux : amdgpu-pro drivers required
