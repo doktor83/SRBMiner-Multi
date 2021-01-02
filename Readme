@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.6.1
+SRBMiner-MULTI CPU & AMD GPU Miner 0.6.2
 -----------------------------------------
 Mine up to 4 different algorithms/coins at the same time!
 
@@ -22,10 +22,12 @@ SUPPORTED ALGORITHMS:
 [CPU ONLY]
 
 [0.85%]   balloon_zentoshi
+[0.85%]   circcash
 [0.85%]   cpupower
 [0.85%]   curvehash
 [0.85%]   minotaur
 [0.85%]   panthera
+[0.85%]   phi5
 [0.85%]   randomarq
 [0.85%]   randomepic
 [0.85%]   randomhash2
