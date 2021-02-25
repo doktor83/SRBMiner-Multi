@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.6.7
+SRBMiner-MULTI CPU & AMD GPU Miner 0.6.8
 -----------------------------------------
 Mine up to 4 different algorithms/coins at the same time!
 
@@ -35,6 +35,7 @@ SUPPORTED ALGORITHMS:
 [0.85%]   randomwow
 [0.85%]   randomx
 [0.00%]   randomxl
+[1.25%]   rx2
 [0.85%]   scryptn2
 [0.85%]   yescryptr16
 [0.85%]   yescryptr32
