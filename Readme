@@ -1,4 +1,4 @@
-SRBMiner-MULTI CPU & AMD GPU Miner 0.6.8
+SRBMiner-MULTI CPU & AMD GPU Miner 0.6.9
 -----------------------------------------
 Mine up to 4 different algorithms/coins at the same time!
 
@@ -78,6 +78,7 @@ SUPPORTED ALGORITHMS:
 [0.00%]   keccak
 [0.85%]   phi5
 [0.65%]   ubqhash
+[1.25%]   verthash
 [0.85%]   verushash
 [0.85%]   yescrypt
 
