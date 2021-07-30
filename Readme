@@ -24,6 +24,7 @@ SUPPORTED ALGORITHMS:
 [CPU ONLY]
 
 [0.85%]   balloon_zentoshi
+[2.00%]   cosa
 [0.85%]   cpupower
 [0.85%]   curvehash
 [0.85%]   ghostrider
