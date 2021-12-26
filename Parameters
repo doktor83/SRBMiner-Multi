@@ -1,0 +1,101 @@
+Parameters:
+
+--a0-is-zil                     (use with ZIL dual mining)
+--adl-disable                   (disable ADL)
+--algorithm value               (algorithm/s to use, separate values with ;)
+--api-enable                    (enable statistics API)
+--api-port value                (port where statistics API is reachable - default 21550)
+--api-rig-name value            (identifier name for your rig in statistics API)
+--api-rig-restart-url value     (user defined url which accessed in browser triggers computer restart)
+--api-miner-restart-url value   (user defined url which accessed in browser triggers miner restart)
+--api-rig-shutdown-url value    (user defined url which accessed in browser triggers computer shutdown)
+--background                    (run miner in background, without console window)
+--disable-cpu                   (disable cpu mining)
+--disable-gpu                   (disable gpu mining)
+--disable-extranonce-subscribe  (don't send mining.extranonce.subscribe to pool)
+--disable-worker-watchdog       (disable crash detection)
+--disable-gpu-tweaking          (disable gpu tweaking options (def. is enabled)
+--enable-opencl-cleanup         (release ocl resources on miner exit/restart)
+--enable-restart-on-rejected    (enable miner auto restart on too many rejected shares. Set number with --max-rejected-shares)
+--enable-workers-ramp-up        (enable GPU workers slow start)
+--extended-log                  (enable more informative logging)
+--forced-shutdown               (never try to free resources on restart/shutdown)
+--give-up-limit value           (number of times to try connecting to a pool before switching to the next pool)
+--gpu-auto-tune value           (runs miner in a mode that tries to find best settings per GPU. 0-disabled, 1-normal, 2-fast [def. is 0])
+--gpu-errors-alert value        (notify when number of result validation errors for any GPU reaches this value [def. is 0 - disabled])
+--list-algorithms               (list available algorithms)
+--list-devices                  (list available gpu devices)
+--log-file filename             (enable logging to file)
+--log-file-mode value           (defines logging mode, 0-2 [def. is 0 - truncate])
+--main-pool-reconnect value     (time, how often to try to reconnect back to the main pool. def. is 10 minutes, min. is 2 minutes)
+--max-no-submit-responses value (max number of no-responses from pool to our submit messages before reconnecting [def. is 3])
+--max-no-share-sent value       (time, if no share is accepted from the pool for x time, restarts miner [def. is 0 - disabled])
+--max-rejected-shares value     (max number of allowed rejected shares on a connection. def. is 20 if '--enable-restart-on-rejected' option enabled)
+--miner-priority value          (main process priority, 1-5 where 5 is highest [def. is 3 - normal])
+--multi-algorithm-job-mode value(how miner handles jobs when mining multiple algorithms, 0-3 [def. is 0])
+--reboot-script-gpu-watchdog    (filename, if set it turns off built in restart procedure on gpu failure, and instead runs this script)
+--retry-time value              (time, how much to wait before trying to reconnect to a pool)
+--reset-vega                    (disable/enable Vega video cards on miner start)
+--set-compute-mode              (sets AMD gpu's to compute mode & disables crossfire - run as admin)
+--setup                         (interactive mode to create basic configuration)
+--startup-script filename       (run custom script on miner start - set clocks, voltage, etc.)
+--shutdown-temperature value    (if this temperature is reached, miner will shutdown system (ADL must be enabled))
+--verthash-dat-path value       (verthash.dat location, if not using default)
+
+
+Cpu parameters
+
+--cpu-threads                   (number of cpu threads to use for mining, separate values with ;)
+--cpu-threads-intensity value   (hashes per worker thread, can be 1, 2 or 4. Def. is 1, separate values with ; and !)
+--cpu-threads-priority value    (worker thread priority, 1-5 where 5 is highest (def. is 2), separate values with ;)
+--cpu-affinity value            (thread affinity bitmask, hex or decimal value, separate values with ;)
+--disable-cpu-optimisations     (use only SSE2 for cpu mining)
+--disable-huge-pages            (disable usage of huge pages)
+--disable-hw-aes                (use only soft AES for cpu mining)
+--disable-msr-tweaks            (disable extra tweaks for some CPU algorithms(def. is enabled)
+--disable-numa                  (disable binding to numa nodes)
+--msr-use-preset value          (defines MSR preset to use 0-2)
+--msr-use-tweaks value          (defines MSR tweaks to use 0-4, | 0 - Intel, 0,1,2,3,4 - AMD |)
+
+
+Gpu parameters
+
+--gpu-id value                  (gpu id/s from --list-devices, separate values with ; and !)
+--gpu-intensity value           (gpu intensity, 0-31 or if > 31 it's treated as raw intensity, separate values with ; and !)
+--gpu-auto-intensity value      (0-disabled, 1-light, 2-normal, separate values with ; and !)
+--gpu-extra-config value        (additional config for some algorithms, separate values with ; and !)
+--gpu-off-temperature value     (gpu turn off temperature, separate values with ; and !)
+--gpu-adl-type value            (ADL to use (1-3), separate values with !)
+--gpu-boost value               (number from 0-100, separate values for gpu's with !)
+--gpu-tweak-profile value       (number from 0-10, 0 disables tweaking. separate values for gpu's with !)
+--gpu-buffer-mode value         (how to handle buffers when using --multi-algorithm-job-mode 3. 0-leave in vram, 1-release on algorithm switch. Default is 0, separate values with ; and !)
+--gpu-cn-mode value             (0 or 1. Default is 0, separate values with ; and !)
+--gpu-ethash-mode value         (1, 2 or 3. Sets how DAG is managed, separate values with ; and !)
+--gpu-manual-tuning filename    (enable manual GPU tuning through configuration file)
+--gpu-progpow-mode value        (1, 2 or 3. Sets how progpow program is created, separate values with ; and !)
+--gpu-progpow-preload value     (number from 0-16. Sets how many periods to pre-create. Def. is 2)
+--gpu-autolykos2-preload value  (number from 0-6, how many datasets to pre-create, depends on free GPU memory. def. is 0,  separate values with ; and !)
+
+
+Pool parameters
+
+--pool value                    (pool address:port, separate values with ; and !)
+--wallet value                  (user wallet address, separate values with ; and !)
+--worker value                  (worker name or rig id, separate values with ; and !)
+--password value                (pool password, separate values with ; and ! [use #; and #! to escape separator characters])
+--diff-factor value             (custom difficulty multiplier, separate values with ; and !)
+--tls value                     (use TLS, true or false, separate values with ; and !)
+--esm value                     (ethash stratum mode [0, 1], separate values with ; and !)
+--nicehash value                (force nicehash, true or false, separate values with ; and !)
+--job-timeout value             (time, if no job received for this period, miner will reconnect. Disabled by default, separate values with ; and !)
+--max-difficulty value          (number, if pool difficulty is above this value miner will reconnect to the pool, separate values with ; and !)
+--start-block-height value      (number, start mining when defined block height is reached. Pool must send this info, separate values with ; and !)
+--keepalive value               (true or false, not every pool supports this, separate values with ; and !)
+--send-stales value             (send stale shares to pool, true or false, separate values with ; and !)
+--algo-min-time value           (time, used with algorithm switching capability, minimum time to mine same algorithm. Def. is 10 min.)
+
+
+: Order of the parameters is important! Always set --gpu.. and --cpu.. parameters AFTER --algorithm !
+: Also if using --gpu-id parameter always set it as the first --gpu.. parameter, then set the rest (--gpu-intensity .. etc..)
+: When setting any of the parameters don't use " or ' around the value!
+: Parameters that take a TIME value must be set in SECONDS!
