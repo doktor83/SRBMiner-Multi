@@ -33,6 +33,7 @@ Parameters:
 --max-rejected-shares value     (max number of allowed rejected shares on a connection. def. is 20 if '--enable-restart-on-rejected' option enabled)
 --miner-priority value          (main process priority, 1-5 where 5 is highest [def. is 3 - normal])
 --multi-algorithm-job-mode value(how miner handles jobs when mining multiple algorithms, 0-3 [def. is 0])
+--proxy value                   (ip:port or user:password@ip:port of socks5 proxy)
 --reboot-script-gpu-watchdog    (filename, if set it turns off built in restart procedure on gpu failure, and instead runs this script)
 --retry-time value              (time, how much to wait before trying to reconnect to a pool)
 --reset-vega                    (disable/enable Vega video cards on miner start)
