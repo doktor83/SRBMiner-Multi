@@ -43,8 +43,8 @@ SUPPORTED ALGORITHMS:
 [0.85%]   randomx
 [0.00%]   randomxl
 [0.85%]   randomyada
-[1.00%]   rx2
 [0.85%]   scryptn2
+[1.00%]   xdag
 [0.85%]   yescryptr16
 [0.85%]   yescryptr32
 [0.85%]   yescryptr8
@@ -73,6 +73,7 @@ SUPPORTED ALGORITHMS:
 [2.00%]   autolykos2
 [0.00%]   blake2b
 [0.00%]   blake2s
+[1.00%]   blake3_alephium
 [0.85%]   circcash
 [0.85%]   cryptonight_ccx
 [0.85%]   cryptonight_gpu
