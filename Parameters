@@ -21,7 +21,7 @@ Parameters:
 --extended-log                  (enable more informative logging)
 --forced-shutdown               (never try to free resources on restart/shutdown)
 --give-up-limit value           (number of times to try connecting to a pool before switching to the next pool)
---gpu-auto-tune value           (runs miner in a mode that tries to find best settings per GPU. 0-disabled, 1-normal, 2-fast [def. is 0])
+--gpu-auto-tune value           (runs miner in a mode that tries to find best settings per GPU. 0-disabled, 1-normal, 2-fast, 3-incrementing [def. is 0])
 --gpu-errors-alert value        (notify when number of result validation errors for any GPU reaches this value [def. is 0 - disabled])
 --list-algorithms               (list available algorithms)
 --list-devices                  (list available gpu devices)
