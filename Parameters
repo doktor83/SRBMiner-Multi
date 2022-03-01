@@ -76,6 +76,8 @@ Gpu parameters
 --gpu-progpow-mode value        (1, 2 or 3. Sets how progpow program is created, separate values with ; and !)
 --gpu-progpow-preload value     (number from 0-16. Sets how many periods to pre-create. Def. is 2)
 --gpu-autolykos2-preload value  (number from 0-6, how many datasets to pre-create, depends on free GPU memory. def. is 0,  separate values with ; and !)
+--gpu-progpow-safe				      (use this if you get a lot of gpu validation errors on progpow algorithms)
+--gpu-dynamo-experimental		    (it can improve performance on some dynamo 'algorithms')
 
 
 Pool parameters
