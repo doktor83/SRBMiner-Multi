@@ -23,7 +23,6 @@ SUPPORTED ALGORITHMS:
 
 [CPU ONLY]
 
-[0.85%]   astrobwt
 [0.85%]   balloon_zentoshi
 [0.85%]   cosa
 [0.85%]   cpupower
@@ -65,11 +64,11 @@ SUPPORTED ALGORITHMS:
 
 [CPU & GPU]
 
+[0.85%]   0x10
 [0.85%]   argon2d_16000
 [0.85%]   argon2d_dynamic
 [0.85%]   argon2id_chukwa
 [0.85%]   argon2id_chukwa2
-[0.00%]   argon2id_ninja
 [2.00%]   autolykos2
 [0.00%]   blake2b
 [0.00%]   blake2s
@@ -95,6 +94,7 @@ SUPPORTED ALGORITHMS:
 [0.85%]   progpow_veil
 [0.85%]   progpow_veriblock
 [0.85%]   progpow_zano
+[0.85%]   sha3d
 [0.65%]   ubqhash
 [1.00%]   verthash
 [0.85%]   verushash
