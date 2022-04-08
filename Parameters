@@ -70,7 +70,6 @@ Gpu parameters
 --gpu-boost value               (number from 0-100, separate values for gpu's with !)
 --gpu-tweak-profile value       (number from 0-10, 0 disables tweaking. separate values for gpu's with !)
 --gpu-buffer-mode value         (how to handle buffers when using --multi-algorithm-job-mode 3. 0-leave in vram, 1-release on algorithm switch. Default is 0, separate values with ; and !)
---gpu-cn-mode value             (0 or 1. Default is 0, separate values with ; and !)
 --gpu-ethash-mode value         (1, 2 or 3. Sets how DAG is managed, separate values with ; and !)
 --gpu-manual-tuning filename    (enable manual GPU tuning through configuration file)
 --gpu-progpow-mode value        (1, 2 or 3. Sets how progpow program is created, separate values with ; and !)
