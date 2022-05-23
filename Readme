@@ -44,9 +44,6 @@ SUPPORTED ALGORITHMS:
 [0.85%]   randomyada
 [0.85%]   scryptn2
 [0.85%]   xdag
-[0.85%]   yescryptr16
-[0.85%]   yescryptr32
-[0.85%]   yescryptr8
 [0.85%]   yespower
 [0.85%]   yespower2b
 [0.85%]   yespowerarwn
@@ -69,10 +66,10 @@ SUPPORTED ALGORITHMS:
 [0.85%]   argon2d_dynamic
 [0.85%]   argon2id_chukwa
 [0.85%]   argon2id_chukwa2
-[2.00%]   autolykos2
+[1.50%]   autolykos2
 [0.00%]   blake2b
 [0.00%]   blake2s
-[1.00%]   blake3_alephium
+[0.85%]   blake3_alephium
 [0.85%]   circcash
 [0.85%]   cryptonight_ccx
 [0.85%]   cryptonight_gpu
@@ -84,6 +81,7 @@ SUPPORTED ALGORITHMS:
 [0.65%]   etchash
 [0.65%]   ethash
 [0.85%]   firopow
+[0.85%]   frkhash
 [1.00%]   heavyhash
 [0.00%]   k12
 [0.85%]   kawpow
@@ -99,6 +97,9 @@ SUPPORTED ALGORITHMS:
 [1.00%]   verthash
 [0.85%]   verushash
 [0.85%]   yescrypt
+[0.85%]   yescryptr16
+[0.85%]   yescryptr32
+[0.85%]   yescryptr8
 
 
 ===========================================
