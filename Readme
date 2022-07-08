@@ -104,6 +104,18 @@ SUPPORTED ALGORITHMS:
 
 
 ===========================================
+DUAL MINEABLE ALGORITHMS:
+===========================================
+
+ethash + kaspa
+ethash + blake3_alephium
+etchash + kaspa
+etchash + blake3_alephium
+autolykos2 + kaspa
+autolykos2 + blake3_alephium
+
+
+===========================================
 SUPPORTED GPU'S:
 ===========================================
 
