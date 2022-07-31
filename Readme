@@ -27,6 +27,7 @@ SUPPORTED ALGORITHMS:
 [0.85%]   cosa
 [0.85%]   cpupower
 [0.85%]   ghostrider
+[0.85%]   mike
 [0.85%]   minotaur
 [0.85%]   minotaurx
 [0.85%]   panthera
@@ -82,9 +83,9 @@ SUPPORTED ALGORITHMS:
 [0.65%]   ethash
 [0.85%]   firopow
 [0.85%]   frkhash
-[1.00%]   heavyhash
+[0.85%]   heavyhash
 [0.00%]   k12
-[1.00%]   kaspa
+[0.85%]   kaspa
 [0.85%]   kawpow
 [0.00%]   keccak
 [0.85%]   lyra2v2_webchain
@@ -110,9 +111,11 @@ DUAL MINEABLE ALGORITHMS:
 ethash + kaspa
 ethash + blake3_alephium
 ethash + heavyhash
+
 etchash + kaspa
 etchash + blake3_alephium
 etchash + heavyhash
+
 autolykos2 + kaspa
 autolykos2 + blake3_alephium
 autolykos2 + heavyhash
