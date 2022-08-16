@@ -19,7 +19,7 @@ https://bitcointalk.org/index.php?topic=5190081.0
 SUPPORTED ALGORITHMS:
 ===========================================
 
-[devfee]  algorithm
+[devfee]  algorithm
 
 [CPU ONLY]
 
@@ -95,6 +95,7 @@ SUPPORTED ALGORITHMS:
 [0.85%]   progpow_veriblock
 [0.85%]   progpow_zano
 [0.85%]   sha3d
+[1.00%]   sha512_256d_radiant
 [0.65%]   ubqhash
 [1.00%]   verthash
 [0.85%]   verushash
@@ -111,14 +112,17 @@ DUAL MINEABLE ALGORITHMS:
 ethash + kaspa
 ethash + blake3_alephium
 ethash + heavyhash
+ethash + sha512_256d_radiant
 
 etchash + kaspa
 etchash + blake3_alephium
 etchash + heavyhash
+etchash + sha512_256d_radiant
 
 autolykos2 + kaspa
 autolykos2 + blake3_alephium
 autolykos2 + heavyhash
+autolykos2 + sha512_256d_radiant
 
 
 ===========================================
