@@ -31,7 +31,6 @@ SUPPORTED ALGORITHMS:
 [0.85%]   minotaur
 [0.85%]   minotaurx
 [0.85%]   panthera
-[1.00%]   pufferfish2bmb
 [0.85%]   randomarq
 [0.85%]   randomepic
 [0.85%]   randomgrft
@@ -67,7 +66,7 @@ SUPPORTED ALGORITHMS:
 [0.85%]   argon2d_dynamic
 [0.85%]   argon2id_chukwa
 [0.85%]   argon2id_chukwa2
-[1.50%]   autolykos2
+[1.00%]   autolykos2
 [0.00%]   blake2b
 [0.00%]   blake2s
 [0.85%]   blake3_alephium
@@ -95,6 +94,7 @@ SUPPORTED ALGORITHMS:
 [0.85%]   progpow_veil
 [0.85%]   progpow_veriblock
 [0.85%]   progpow_zano
+[1.00%]   pufferfish2bmb
 [0.85%]   sha3d
 [1.00%]   sha512_256d_radiant
 [0.65%]   ubqhash
