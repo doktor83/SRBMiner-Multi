@@ -70,6 +70,7 @@ SUPPORTED ALGORITHMS:
 [0.00%]   blake2b
 [0.00%]   blake2s
 [0.85%]   blake3_alephium
+[0.85%]   blake3_ironfish
 [0.85%]   circcash
 [0.85%]   cryptonight_ccx
 [0.85%]   cryptonight_gpu
@@ -112,19 +113,21 @@ DUAL MINEABLE ALGORITHMS:
 
 ethash + kaspa
 ethash + blake3_alephium
+ethash + blake3_ironfish
 ethash + heavyhash
 ethash + sha512_256d_radiant
 
 etchash + kaspa
 etchash + blake3_alephium
+etchash + blake3_ironfish
 etchash + heavyhash
 etchash + sha512_256d_radiant
 
 autolykos2 + kaspa
 autolykos2 + blake3_alephium
+autolykos2 + blake3_ironfish
 autolykos2 + heavyhash
 autolykos2 + sha512_256d_radiant
-
 
 ===========================================
 SUPPORTED GPU'S:
