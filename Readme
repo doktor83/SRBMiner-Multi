@@ -82,6 +82,7 @@ SUPPORTED ALGORITHMS:
 [1.00%]   dynamo
 [0.65%]   etchash
 [0.65%]   ethash
+[0.85%]   evrprogpow
 [0.85%]   firopow
 [0.85%]   frkhash
 [0.85%]   heavyhash
