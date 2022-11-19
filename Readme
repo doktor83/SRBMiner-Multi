@@ -23,6 +23,8 @@ SUPPORTED ALGORITHMS:
 
 [CPU ONLY]
 
+[CPU ONLY]
+
 [0.85%]   balloon_zentoshi
 [0.85%]   cosa
 [0.85%]   cpupower
@@ -97,8 +99,9 @@ SUPPORTED ALGORITHMS:
 [0.85%]   progpow_veriblock
 [0.85%]   progpow_zano
 [1.00%]   pufferfish2bmb
+[0.85%]   sha256dt
 [0.85%]   sha3d
-[1.00%]   sha512_256d_radiant
+[0.85%]   sha512_256d_radiant
 [0.65%]   ubqhash
 [1.00%]   verthash
 [0.85%]   verushash
