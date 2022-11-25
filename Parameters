@@ -98,7 +98,5 @@ Pool parameters
 --algo-min-time value           (time, used with algorithm switching capability, minimum time to mine same algorithm. Def. is 10 min.)
 
 
-: Order of the parameters is important! Always set --gpu.. and --cpu.. parameters AFTER --algorithm !
-: Also if using --gpu-id parameter always set it as the first --gpu.. parameter, then set the rest (--gpu-intensity .. etc..)
 : When setting any of the parameters don't use " or ' around the value!
 : Parameters that take a TIME value must be set in SECONDS!
