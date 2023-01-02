@@ -3,7 +3,7 @@ Generic parameters:
 --a0-is-zil                     (use with ZIL dual mining)
 --a0-start-script filename      (run script when algorithm 0 becomes active - set OC, etc.)
 --a1-start-script filename      (run script when algorithm 1 becomes active - set OC, etc.)
---adl-disable                   (disable ADL)
+--gpu-sensors-disable           (disable reading of GPU sensors)
 --algorithm value               (algorithm/s to use, separate values with ;)
 --api-enable                    (enable statistics API)
 --api-port value                (port where statistics API is reachable - default 21550)
@@ -14,6 +14,8 @@ Generic parameters:
 --background                    (run miner in background, without console window)
 --disable-cpu                   (disable cpu mining)
 --disable-gpu                   (disable gpu mining)
+--disable-gpu-amd               (disable gpu mining with AMD gpu's)
+--disable-gpu-nvidia            (disable gpu mining with NVIDIA gpu's)
 --disable-extranonce-subscribe  (don't send mining.extranonce.subscribe to pool)
 --disable-worker-watchdog       (disable crash detection)
 --disable-gpu-tweaking          (disable gpu tweaking options (def. is enabled)
@@ -112,5 +114,4 @@ Parameter aliases
 --password                      -p
 --pool                          -o
 --wallet                        -u
-
 : Parameters that take a TIME value must be set in SECONDS!
