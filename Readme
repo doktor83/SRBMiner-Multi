@@ -31,7 +31,7 @@ N : NVIDIA GPU
 [0.00%]   [ C  A  - ]   blake2b
 [0.00%]   [ C  A  - ]   blake2s
 [0.85%]   [ C  A  N ]   blake3_alephium
-[0.85%]   [ C  A  - ]   blake3_ironfish
+[0.85%]   [ C  A  N ]   blake3_ironfish
 [0.85%]   [ C  A  - ]   circcash
 [0.85%]   [ C  -  - ]   cosa
 [0.85%]   [ C  -  - ]   cpupower
@@ -42,7 +42,7 @@ N : NVIDIA GPU
 [0.85%]   [ C  A  - ]   cryptonight_upx
 [0.85%]   [ C  A  - ]   cryptonight_xhv
 [0.85%]   [ C  A  - ]   curvehash
-[1.00%]   [ C  A  - ]   dynamo
+[1.00%]   [ C  A  N ]   dynamo
 [0.65%]   [ C  A  N ]   etchash
 [0.65%]   [ C  A  N ]   ethash
 [0.85%]   [ C  A  N ]   evrprogpow
@@ -80,7 +80,7 @@ N : NVIDIA GPU
 [0.85%]   [ C  A  N ]   sha256dt
 [0.85%]   [ C  A  - ]   sha3d
 [0.85%]   [ C  A  N ]   sha512_256d_radiant
-[0.65%]   [ C  A  - ]   ubqhash
+[0.65%]   [ C  A  N ]   ubqhash
 [1.00%]   [ C  A  - ]   verthash
 [0.85%]   [ C  A  - ]   verushash
 [0.85%]   [ C  -  - ]   xdag
@@ -144,6 +144,7 @@ AMD
 NVIDIA
 ===========================================
 
++ Hopper
 + Ada Lovelace
 + Ampere 
 + Turing
