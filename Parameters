@@ -89,6 +89,13 @@ Gpu parameters
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
 
 
+Gpu OC parameters
+
+--gpu-cclock                    (set fixed core clock (in MHZ), separate values with ; and ! [NVIDIA only])
+--gpu-mclock                    (set fixed memory clock (in MHZ), separate values with ; and ! [NVIDIA only])
+--gpu-plimit                    (set power management limit (in W), separate values with ; and ! [NVIDIA only])
+
+
 Pool parameters
 
 --pool value                    (pool address:port, separate values with ; and !)
