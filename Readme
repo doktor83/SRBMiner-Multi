@@ -110,21 +110,24 @@ DUAL MINEABLE ALGORITHMS:
 
 ethash + kaspa
 ethash + blake3_alephium
+ethash + blake3_ironfish
 ethash + heavyhash
-ethash + sha512_256d_radiant
+ethash + sha512_256d_radiant 
 ethash + sha256dt
 
 etchash + kaspa
 etchash + blake3_alephium
+etchash + blake3_ironfish
 etchash + heavyhash
 etchash + sha512_256d_radiant
-etchash + sha256d
+etchash + sha256dt
 
 autolykos2 + kaspa
 autolykos2 + blake3_alephium
+autolykos2 + blake3_ironfish
 autolykos2 + heavyhash
 autolykos2 + sha512_256d_radiant
-autolykos2 + sha256d
+autolykos2 + sha256dt
 
 
 ===========================================
