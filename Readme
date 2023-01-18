@@ -21,19 +21,15 @@ C : CPU
 A : AMD GPU
 N : NVIDIA GPU
 
-[0.85%]   [ C  A  - ]   0x10
 [0.85%]   [ C  A  - ]   argon2d_16000
 [0.85%]   [ C  A  - ]   argon2d_dynamic
 [0.85%]   [ C  A  - ]   argon2id_chukwa
 [0.85%]   [ C  A  - ]   argon2id_chukwa2
 [1.00%]   [ C  A  N ]   autolykos2
-[0.85%]   [ C  -  - ]   balloon_zentoshi
 [0.00%]   [ C  A  - ]   blake2b
 [0.00%]   [ C  A  - ]   blake2s
 [0.85%]   [ C  A  N ]   blake3_alephium
 [0.85%]   [ C  A  N ]   blake3_ironfish
-[0.85%]   [ C  A  - ]   circcash
-[0.85%]   [ C  -  - ]   cosa
 [0.85%]   [ C  -  - ]   cpupower
 [0.85%]   [ C  A  - ]   cryptonight_ccx
 [0.85%]   [ C  A  - ]   cryptonight_gpu
@@ -47,7 +43,6 @@ N : NVIDIA GPU
 [0.65%]   [ C  A  N ]   ethash
 [0.85%]   [ C  A  N ]   evrprogpow
 [0.85%]   [ C  A  N ]   firopow
-[0.85%]   [ C  A  - ]   frkhash
 [0.85%]   [ C  -  - ]   ghostrider
 [0.85%]   [ C  A  N ]   heavyhash
 [0.00%]   [ C  A  - ]   k12
