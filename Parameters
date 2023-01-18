@@ -85,7 +85,7 @@ Gpu parameters
 --gpu-progpow-safe              (use this if you get a lot of gpu validation errors on progpow algorithms)
 --gpu-dynamo-experimental       (it can improve performance on some dynamo 'algorithms')
 --gpu-table-slow-build          (builds DAG/Datatable slower - might help if GPU's are crashing on DAG/Datatable creation)
---gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for dual mining, in percent [1-90])
+--gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for dual mining, in percent [1-95])
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
 
 
@@ -93,6 +93,8 @@ Gpu OC parameters
 
 --gpu-cclock                    (set fixed core clock (in MHZ), separate values with ; and ! [NVIDIA only])
 --gpu-mclock                    (set fixed memory clock (in MHZ), separate values with ; and ! [NVIDIA only])
+--gpu-coffset                   (set core clock offset (in MHZ), separate values with ; and ! [NVIDIA only])
+--gpu-moffset                   (set memory clock offset (in MHZ), separate values with ; and ! [NVIDIA only])
 --gpu-plimit                    (set power management limit (in W), separate values with ; and ! [NVIDIA only])
 
 
@@ -121,4 +123,5 @@ Parameter aliases
 --password                      -p
 --pool                          -o
 --wallet                        -u
+
 : Parameters that take a TIME value must be set in SECONDS!
