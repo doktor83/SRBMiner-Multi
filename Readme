@@ -73,7 +73,7 @@ I : INTEL GPU
 [0.85%]   [ C  -  -  - ]   randomyada
 [0.85%]   [ C  -  -  - ]   scryptn2
 [0.85%]   [ C  A  N  I ]   sha256dt
-[0.85%]   [ C  A  -  - ]   sha3d
+[0.85%]   [ C  A  N  I ]   sha3d
 [0.85%]   [ C  A  N  I ]   sha512_256d_radiant
 [0.65%]   [ C  A  N  I ]   ubqhash
 [1.00%]   [ C  A  -  - ]   verthash
@@ -102,6 +102,8 @@ I : INTEL GPU
 ===========================================
 DUAL MINEABLE ALGORITHMS:
 ===========================================
+
+dynex + sha512_256d_radiant
 
 ethash + kaspa
 ethash + blake3_alephium
