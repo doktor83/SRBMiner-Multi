@@ -103,9 +103,11 @@ I : INTEL GPU
 DUAL MINEABLE ALGORITHMS:
 ===========================================
 
-dynex + sha512_256d_radiant
-dynex + blake3_ironfish
 dynex + kaspa
+dynex + blake3_alephium
+dynex + blake3_ironfish
+dynex + sha512_256d_radiant
+dynex + sha256dt
 
 ethash + kaspa
 ethash + blake3_alephium
