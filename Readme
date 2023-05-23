@@ -131,6 +131,9 @@ autolykos2 + heavyhash
 autolykos2 + sha512_256d_radiant
 autolykos2 + sha256dt
 
+... also ...
+randomepic + any algo
+progpow_epic + any algo
 
 ===========================================
 SUPPORTED GPU'S
