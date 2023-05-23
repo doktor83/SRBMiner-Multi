@@ -50,6 +50,7 @@ I : INTEL GPU
 [0.85%]   [ C  A  N  - ]   kawpow
 [0.00%]   [ C  A  -  - ]   keccak
 [0.85%]   [ C  A  N  - ]   lyra2v2_webchain
+[2.00%]   [ C  A  N  I ]   memehash
 [0.85%]   [ C  -  -  - ]   mike
 [0.85%]   [ C  -  -  - ]   minotaur
 [0.85%]   [ C  -  -  - ]   minotaurx
