@@ -160,6 +160,12 @@ Parameter aliases
 2 - add datetime stamp to log's name so it creates a new log file on every miner start
 
 
+--esm
+0 - getwork/ETHPROXY
+1 - EthereumStratum/1.0.0
+2 - EthereumStratum/1.0.0 + nicehash mode
+
+
 --msr-use-preset can be used to select from 3 predefined presets (0,1,2) of register values. If not used, preset is auto selected.
 If combined with --msr-use-tweaks parameter, you will use values from the defined preset.
 
