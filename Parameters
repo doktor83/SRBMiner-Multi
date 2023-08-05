@@ -14,6 +14,7 @@ Generic parameters:
 --disable-gpu-amd               (disable gpu mining with AMD gpu's)
 --disable-gpu-nvidia            (disable gpu mining with NVIDIA gpu's)
 --disable-gpu-intel             (disable gpu mining with INTEL gpu's)
+--disable-gpu-dual-kernels      (disable usage of optimised dual kernels)
 --disable-extranonce-subscribe  (don't send mining.extranonce.subscribe to pool)
 --disable-gpu-tweaking          (disable gpu tweaking options (def. is enabled)
 --disable-worker-watchdog       (disable crash detection)
@@ -31,7 +32,7 @@ Generic parameters:
 --log-file filename             (enable logging to file)
 --log-file-mode value           (defines logging mode, 0-2 [def. is 0 - truncate])
 --main-pool-reconnect value     (time, how often to try to reconnect back to the main pool. def. is 10 minutes, min. is 2 minutes)
---max-no-submit-responses value (max number of no-responses from pool to our submit messages before reconnecting [def. is 5])
+--max-no-submit-responses value (max number of no-responses from pool to our submit messages before reconnecting [def. is 10])
 --max-no-share-sent value       (time, if no share is accepted from the pool for x time, restarts miner [def. is 0 - disabled])
 --max-rejected-shares value     (max number of allowed rejected shares on a connection. def. is 15 if '--enable-restart-on-rejected' option enabled)
 --mallob-endpoint value         (Dynex mallob endpoint/s. separate values with ',')
@@ -52,8 +53,8 @@ Cpu parameters
 
 --cpu-threads                   (number of cpu threads to use for mining, separate values with ;)
 --cpu-threads-intensity value   (hashes per worker thread, can be 1, 2 or 4. Def. is 1, separate values with ',')
---cpu-threads-priority value    (worker thread priority, 1-5 where 5 is highest (def. is 2), separate values with ;)
---cpu-affinity value            (thread affinity bitmask, hex or decimal value, separate values with ;)
+--cpu-threads-priority value    (worker thread priority, 1-5 where 5 is highest (def. is 2), separate values with ';')
+--cpu-affinity value            (thread affinity bitmask, hex or decimal value, separate values with ';')
 --disable-auto-affinity         (disable auto affinity setup)
 --disable-cpu-optimisations     (use only SSE2 for cpu mining)
 --disable-huge-pages            (disable usage of huge pages)
@@ -85,6 +86,7 @@ Gpu parameters
 --gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for dual mining, in percent [1-95])
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
 --gpu-disable-auto-buffer       (disable automatic switch to --gpu-buffer-mode 1 in case if not enough vram)
+--gpu-dynex-r value             (performance tuning for Dynex, separate values with ',' [min. 1, max. 16])
 
 
 Gpu OC parameters
@@ -135,7 +137,7 @@ Pool parameters
 ZIL mining parameters
 
 --zil-enable                    (enable ZIL only mining)
---zil-epoch value               (ZIL epoch number. Default is 0)
+--zil-epoch value               (ZIL epoch number. Default is 1)
 --zil-pool value                (ZIL pool address:port, separate values with ',')
 --zil-wallet value              (ZIL wallet address, separate values with ',')
 --zil-password value            (ZIL pool password, separate values with ',')
