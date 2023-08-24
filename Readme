@@ -41,7 +41,7 @@ I : INTEL GPU
 [2.50%]   [ -  A  -  - ]   dynex
 [0.65%]   [ -  A  N  I ]   etchash
 [0.65%]   [ -  A  N  I ]   ethash
-[2.00%]   [ -  A  N  - ]   ethashb3
+[1.00%]   [ -  A  N  - ]   ethashb3
 [0.85%]   [ -  A  N  - ]   evrprogpow
 [0.85%]   [ -  A  N  - ]   firopow
 [0.85%]   [ C  -  -  - ]   ghostrider
@@ -107,6 +107,7 @@ DUAL MINEABLE ALGORITHMS:
 ===========================================
 
 ethashb3 + sha512_256d_radiant
+ethashb3 + blake3_alephium
 
 dynex + kaspa
 dynex + blake3_alephium
