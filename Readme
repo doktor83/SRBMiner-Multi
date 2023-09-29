@@ -38,10 +38,10 @@ I : INTEL GPU
 [0.85%]   [ C  A  -  - ]   cryptonight_xhv
 [0.85%]   [ C  A  -  - ]   curvehash
 [1.00%]   [ C  A  N  - ]   dynamo
-[2.50%]   [ -  A  -  - ]   dynex
+[2.50%]   [ -  A  N  - ]   dynex
 [0.65%]   [ -  A  N  I ]   etchash
 [0.65%]   [ -  A  N  I ]   ethash
-[1.00%]   [ -  A  N  - ]   ethashb3
+[0.85%]   [ -  A  N  - ]   ethashb3
 [0.85%]   [ -  A  N  - ]   evrprogpow
 [0.85%]   [ -  A  N  - ]   firopow
 [0.85%]   [ C  -  -  - ]   ghostrider
@@ -109,32 +109,28 @@ DUAL MINEABLE ALGORITHMS:
 ethashb3 + sha512_256d_radiant
 ethashb3 + blake3_alephium
 
-dynex + kaspa
-dynex + blake3_alephium
-dynex + blake3_ironfish
-dynex + sha512_256d_radiant
-dynex + sha256dt
-
-ethash + kaspa
-ethash + blake3_alephium
-ethash + blake3_ironfish
-ethash + heavyhash
-ethash + sha512_256d_radiant
-ethash + sha256dt
-
-etchash + kaspa
-etchash + blake3_alephium
-etchash + blake3_ironfish
-etchash + heavyhash
-etchash + sha512_256d_radiant
-etchash + sha256dt
-
-autolykos2 + kaspa
+autolykos2 + sha512_256d_radiant
 autolykos2 + blake3_alephium
 autolykos2 + blake3_ironfish
-autolykos2 + heavyhash
-autolykos2 + sha512_256d_radiant
 autolykos2 + sha256dt
+autolykos2 + kaspa
+autolykos2 + heavyhash
+
+ethash + sha512_256d_radiant
+ethash + blake3_alephium
+ethash + blake3_ironfish
+ethash + sha256dt
+ethash + kaspa
+ethash + heavyhash
+
+etchash + sha512_256d_radiant
+etchash + blake3_alephium
+etchash + blake3_ironfish
+etchash + sha256dt
+etchash + kaspa
+etchash + heavyhash
+
+
 
 ... also ...
 randomepic + any algo
