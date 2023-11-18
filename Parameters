@@ -16,10 +16,8 @@ Generic parameters:
 --disable-gpu-intel             (disable gpu mining with INTEL gpu's)
 --disable-gpu-dual-kernels      (disable usage of optimised dual kernels)
 --disable-extranonce-subscribe  (don't send mining.extranonce.subscribe to pool)
---disable-gpu-tweaking          (disable gpu tweaking options (def. is enabled)
 --disable-worker-watchdog       (disable crash detection)
 --disable-ptx-check             (disable nvidia ptx version check)
---enable-opencl-cleanup         (release ocl resources on miner exit/restart)
 --enable-restart-on-rejected    (enable miner auto restart on too many rejected shares. Set number with --max-rejected-shares)
 --enable-workers-ramp-up        (enable GPU workers slow start)
 --extended-log                  (enable more informative logging)
@@ -36,7 +34,6 @@ Generic parameters:
 --max-no-submit-responses value (max number of no-responses from pool to our submit messages before reconnecting [def. is 10])
 --max-no-share-sent value       (time, if no share is accepted from the pool for x time, restarts miner [def. is 0 - disabled])
 --max-rejected-shares value     (max number of allowed rejected shares on a connection. def. is 15 if '--enable-restart-on-rejected' option enabled)
---mallob-endpoint value         (Dynex mallob endpoint/s. separate values with ',')
 --miner-priority value          (main process priority, 1-5 where 5 is highest [def. is 3 - normal])
 --multi-algorithm-job-mode value(how miner handles jobs when mining multiple algorithms, 0-3 [def. is 0])
 --proxy value                   (ip:port or user:password@ip:port of socks5 proxy)
@@ -73,11 +70,8 @@ Gpu parameters
 --gpu-intensity value           (gpu intensity, 0-31 or if > 31 it's treated as raw intensity, separate values with ',')
 --gpu-extra-config value        (additional config for some algorithms, separate values with ',')
 --gpu-off-temperature value     (gpu turn off temperature, separate values with ',')
---gpu-boost value               (number from 0-100, separate values for gpu's with !)
---gpu-tweak-profile value       (number from 0-10, 0 disables tweaking. separate values for gpu's with ',')
 --gpu-buffer-mode value         (how to handle buffers when mining ZIL or using --multi-algorithm-job-mode 3. 0-leave in vram, 1-release on algorithm switch. Default is 0, separate values with ',')
 --gpu-ethash-mode value         (1, 2 or 3. Sets how DAG is managed, separate values with ',')
---gpu-manual-tuning filename    (enable manual GPU tuning through configuration file)
 --gpu-progpow-mode value        (1, 2 or 3. Sets how progpow program is created, separate values with ',')
 --gpu-progpow-preload value     (number from 0-16. Sets how many periods to pre-create. Def. is 1)
 --gpu-autolykos2-preload value  (number from 0-6, how many datasets to pre-create, depends on free GPU memory. def. is 0,  separate values with ',')
@@ -87,7 +81,6 @@ Gpu parameters
 --gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for dual mining, in percent [1-95])
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
 --gpu-disable-auto-buffer       (disable automatic switch to --gpu-buffer-mode 1 in case if not enough vram)
---gpu-dynex-r value             (performance tuning for Dynex, separate values with ',' [min. 1, max. 16])
 
 
 Gpu OC parameters
@@ -132,7 +125,6 @@ Pool parameters
 --start-block-height value      (number, start mining when defined block height is reached. Pool must send this info, separate values with ',')
 --keepalive value               (true or false, not every pool supports this, separate values with ',')
 --send-stales value             (send stale shares to pool, true or false, separate values with ',')
---algo-min-time value           (time, used with algorithm switching capability, minimum time to mine same algorithm. Def. is 10 min.)
 
 
 ZIL mining parameters
