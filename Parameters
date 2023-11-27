@@ -85,6 +85,7 @@ Gpu parameters
 
 Gpu OC parameters
 
+--gpu-disable-oc                (disable OC functionality)
 --gpu-reset-oc                  (reset default OC values on miner start [NVIDIA only])
 --gpu-cclock0                   (A0 - set fixed core clock (in MHZ), separate values with ',' [NVIDIA only])
 --gpu-mclock0                   (A0 - set fixed memory clock (in MHZ), separate values with ',' [NVIDIA only])
