@@ -48,7 +48,7 @@ I : INTEL GPU
 [0.85%]   [ C  -  -  - ]   ghostrider
 [0.85%]   [ -  A  N  I ]   heavyhash
 [0.00%]   [ -  A  -  - ]   k12
-[1.00%]   [ -  A  N  I ]   karlsenhash
+[0.85%]   [ -  A  N  I ]   karlsenhash
 [0.85%]   [ -  A  N  I ]   kaspa
 [0.85%]   [ -  A  N  - ]   kawpow
 [0.00%]   [ -  A  -  - ]   keccak
@@ -105,9 +105,12 @@ I : INTEL GPU
 DUAL MINEABLE ALGORITHMS:
 ===========================================
 
+ethashb3 + karlsenhash
 ethashb3 + sha512_256d_radiant
 ethashb3 + blake3_alephium
+ethashb3 + sha256dt
 
+autolykos2 + karlsenhash
 autolykos2 + sha512_256d_radiant
 autolykos2 + blake3_alephium
 autolykos2 + blake3_ironfish
