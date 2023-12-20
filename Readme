@@ -30,6 +30,7 @@ I : INTEL GPU
 [0.00%]   [ -  A  -  - ]   blake2b
 [0.00%]   [ -  A  -  - ]   blake2s
 [0.85%]   [ -  A  N  I ]   blake3_alephium
+[1.00%]   [ -  A  N  I ]   blake3_decred
 [0.85%]   [ -  A  N  I ]   blake3_ironfish
 [0.85%]   [ C  -  -  - ]   cpupower
 [0.85%]   [ C  A  -  - ]   cryptonight_ccx
@@ -65,6 +66,7 @@ I : INTEL GPU
 [0.85%]   [ -  A  N  - ]   progpow_veriblock
 [0.85%]   [ -  A  N  - ]   progpow_zano
 [1.00%]   [ C  A  -  - ]   pufferfish2bmb
+[0.85%]   [ -  A  -  I ]   pyrinhash
 [0.85%]   [ C  -  -  - ]   randomarq
 [0.85%]   [ C  -  -  - ]   randomepic
 [0.85%]   [ C  -  -  - ]   randomgrft
@@ -108,11 +110,14 @@ DUAL MINEABLE ALGORITHMS:
 ethashb3 + karlsenhash
 ethashb3 + sha512_256d_radiant
 ethashb3 + blake3_alephium
+ethashb3 + blake3_decred
 ethashb3 + sha256dt
 
+autolykos2 + pyrinhash
 autolykos2 + karlsenhash
 autolykos2 + sha512_256d_radiant
 autolykos2 + blake3_alephium
+autolykos2 + blake3_decred
 autolykos2 + blake3_ironfish
 autolykos2 + sha256dt
 autolykos2 + kaspa
@@ -120,6 +125,7 @@ autolykos2 + heavyhash
 
 ethash + sha512_256d_radiant
 ethash + blake3_alephium
+ethash + blake3_decred
 ethash + blake3_ironfish
 ethash + sha256dt
 ethash + kaspa
@@ -127,6 +133,7 @@ ethash + heavyhash
 
 etchash + sha512_256d_radiant
 etchash + blake3_alephium
+etchash + blake3_decred
 etchash + blake3_ironfish
 etchash + sha256dt
 etchash + kaspa
