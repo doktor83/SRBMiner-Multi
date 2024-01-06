@@ -76,7 +76,6 @@ Gpu parameters
 --gpu-progpow-preload value     (number from 0-16. Sets how many periods to pre-create. Def. is 1)
 --gpu-autolykos2-preload value  (number from 0-6, how many datasets to pre-create, depends on free GPU memory. def. is 0,  separate values with ',')
 --gpu-progpow-safe              (use this if you get a lot of gpu validation errors on progpow algorithms)
---gpu-dynamo-experimental       (it can improve performance on some dynamo 'algorithms')
 --gpu-table-slow-build          (builds DAG/Datatable slower - might help if GPU's are crashing on DAG/Datatable creation)
 --gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for dual mining, in percent [1-95])
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
