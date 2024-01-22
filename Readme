@@ -26,6 +26,7 @@ I : INTEL GPU
 [0.85%]   [ C  A  -  - ]   argon2d_dynamic
 [0.85%]   [ C  A  -  - ]   argon2id_chukwa
 [0.85%]   [ C  A  -  - ]   argon2id_chukwa2
+[2.00%]   [ C  -  -  - ]   aurum
 [1.00%]   [ -  A  N  I ]   autolykos2
 [0.85%]   [ -  A  N  I ]   blake3_alephium
 [1.00%]   [ -  A  N  I ]   blake3_decred
