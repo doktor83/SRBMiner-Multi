@@ -49,16 +49,17 @@ Generic parameters:
 
 Cpu parameters
 
---cpu-threads                   (number of cpu threads to use for mining, separate values with ;)
+--cpu-threads                   (number of cpu threads to use for mining, separate values with ';')
 --cpu-threads-intensity value   (hashes per worker thread, can be 1, 2 or 4. Def. is 1, separate values with ',')
 --cpu-threads-priority value    (worker thread priority, 1-5 where 5 is highest (def. is 2), separate values with ';')
 --cpu-affinity value            (thread affinity bitmask, hex or decimal value, separate values with ';')
+--cpu-numa-bind value           (force binding of CPU worker threads to a specific NUMA node, separate values with ';')
 --disable-auto-affinity         (disable auto affinity setup)
 --disable-cpu-optimisations     (use only SSE2 for cpu mining)
 --disable-huge-pages            (disable usage of huge pages)
 --disable-hw-aes                (use only soft AES for cpu mining)
 --disable-msr-tweaks            (disable MSR tweaks(def. is enabled)
---disable-numa                  (disable auto binding to numa nodes)
+--disable-numa-binding          (disable auto binding to NUMA node/s)
 --force-msr-tweaks              (force usage of MSR tweaks
 --msr-use-preset value          (defines MSR preset to use 0-3)
 --msr-use-tweaks value          (defines MSR tweaks to use 0-4, | 0 - Intel, 0,1,2,3,4 - AMD |)
@@ -118,7 +119,7 @@ Pool parameters
 --password value                (pool password, separate values with ; and ! [use #; and #! to escape separator characters])
 --diff-factor value             (custom difficulty multiplier, separate values with ',')
 --tls value                     (use TLS, true or false, separate values with ',')
---esm value                     (ethash stratum mode [0, 1, 2], separate values with ',')
+--esm value                     (ethash stratum mode [0 (getwork), 1 (ethereumstratum 1.0), 2 (ethereumstratum 1.0 + nicehash)], separate values with ',')
 --nicehash value                (force nicehash, true or false, separate values with ',')
 --job-timeout value             (time, if no job received for this period, miner will reconnect. Disabled by default, separate values with ',')
 --max-difficulty value          (number, if pool difficulty is above this value miner will reconnect to the pool, separate values with ',')
@@ -157,6 +158,14 @@ For example:
 0 - clear content of existing log file before writing
 1 - append to existing log file's end
 2 - add datetime stamp to log's name so it creates a new log file on every miner start
+
+--cpu-numa-bind
+
+Bind CPU worker threads to NUMA node id 1 (second NUMA node) with auto thread selection and affinity mask:
+--algorithm ... --pool ... --wallet ... --cpu-numa-bind 1
+
+Bind CPU worker threads to NUMA node id 1 (second NUMA node) with manually set number of threads and affinity mask:
+--algorithm ... --pool ... --wallet ... --cpu-threads 8 --cpu-affinity 0x5555 --cpu-numa-bind 1
 
 
 --esm
