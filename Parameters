@@ -23,7 +23,6 @@ Generic parameters:
 --extended-log                  (enable more informative logging)
 --forced-shutdown               (never try to free resources on restart/shutdown)
 --give-up-limit value           (number of times to try connecting to a pool before switching to the next pool)
---gpu-auto-tune value           (runs miner in a mode that tries to find best settings per GPU. 0-disabled, 1-normal, 2-fast, 3-incrementing [def. is 0])
 --gpu-errors-alert value        (notify when number of result validation errors for any GPU reaches this value [def. is 0 - disabled])
 --gpu-sensors-disable           (disable reading of GPU sensors)
 --list-algorithms               (list available algorithms)
@@ -35,8 +34,8 @@ Generic parameters:
 --max-no-share-sent value       (time, if no share is accepted from the pool for x time, restarts miner [def. is 0 - disabled])
 --max-rejected-shares value     (max number of allowed rejected shares on a connection. def. is 15 if '--enable-restart-on-rejected' option enabled)
 --miner-priority value          (main process priority, 1-5 where 5 is highest [def. is 3 - normal])
---multi-algorithm-job-mode value(how miner handles jobs when mining multiple algorithms, 0-3 [def. is 0])
 --proxy value                   (ip:port or user:password@ip:port of socks5 proxy)
+--randomx-use-1gb-pages         (Allocate 1GB sized pages)
 --reboot-script-gpu-watchdog    (filename, if set it turns off built in restart procedure on gpu failure, and instead runs this script)
 --retry-time value              (time, how much to wait before trying to reconnect to a pool)
 --set-compute-mode              (sets AMD gpu's to compute mode & disables crossfire - run as admin)
@@ -71,16 +70,12 @@ Gpu parameters
 --gpu-intensity value           (gpu intensity, 0-31 or if > 31 it's treated as raw intensity, separate values with ',')
 --gpu-extra-config value        (additional config for some algorithms, separate values with ',')
 --gpu-off-temperature value     (gpu turn off temperature, separate values with ',')
---gpu-buffer-mode value         (how to handle buffers when mining ZIL or using --multi-algorithm-job-mode 3. 0-leave in vram, 1-release on algorithm switch. Default is 0, separate values with ',')
---gpu-ethash-mode value         (1, 2 or 3. Sets how DAG is managed, separate values with ',')
 --gpu-progpow-mode value        (1, 2 or 3. Sets how progpow program is created, separate values with ',')
---gpu-progpow-preload value     (number from 0-16. Sets how many periods to pre-create. Def. is 1)
---gpu-autolykos2-preload value  (number from 0-6, how many datasets to pre-create, depends on free GPU memory. def. is 0,  separate values with ',')
+--gpu-progpow-preload value     (number from 0-16. Sets how many periods to pre-create. Def. is 3)
 --gpu-progpow-safe              (use this if you get a lot of gpu validation errors on progpow algorithms)
 --gpu-table-slow-build          (builds DAG/Datatable slower - might help if GPU's are crashing on DAG/Datatable creation)
---gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for dual mining, in percent [1-95])
+--gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for optimized dual mining, in percent [1-95])
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
---gpu-disable-auto-buffer       (disable automatic switch to --gpu-buffer-mode 1 in case if not enough vram)
 
 
 Gpu OC parameters
@@ -122,8 +117,6 @@ Pool parameters
 --esm value                     (ethash stratum mode [0 (getwork), 1 (ethereumstratum 1.0), 2 (ethereumstratum 1.0 + nicehash)], separate values with ',')
 --nicehash value                (force nicehash, true or false, separate values with ',')
 --job-timeout value             (time, if no job received for this period, miner will reconnect. Disabled by default, separate values with ',')
---max-difficulty value          (number, if pool difficulty is above this value miner will reconnect to the pool, separate values with ',')
---start-block-height value      (number, start mining when defined block height is reached. Pool must send this info, separate values with ',')
 --keepalive value               (true or false, not every pool supports this, separate values with ',')
 --send-stales value             (send stale shares to pool, true or false, separate values with ',')
 
@@ -154,13 +147,13 @@ For example:
 
 ==================================================================================================================
 
---log-file-mode
+--log-file-mode:
 0 - clear content of existing log file before writing
 1 - append to existing log file's end
 2 - add datetime stamp to log's name so it creates a new log file on every miner start
 
---cpu-numa-bind
 
+--cpu-numa-bind:
 Bind CPU worker threads to NUMA node id 1 (second NUMA node) with auto thread selection and affinity mask:
 --algorithm ... --pool ... --wallet ... --cpu-numa-bind 1
 
@@ -168,24 +161,15 @@ Bind CPU worker threads to NUMA node id 1 (second NUMA node) with manually set n
 --algorithm ... --pool ... --wallet ... --cpu-threads 8 --cpu-affinity 0x5555 --cpu-numa-bind 1
 
 
---esm
+--esm:
 0 - getwork/ETHPROXY
 1 - EthereumStratum/1.0.0
 2 - EthereumStratum/1.0.0 + nicehash mode
 
 
---msr-use-preset can be used to select from 3 predefined presets (0,1,2) of register values. If not used, preset is auto selected.
+--msr-use-preset:
+can be used to select from 3 predefined presets (0,1,2) of register values. If not used, preset is auto selected.
 If combined with --msr-use-tweaks parameter, you will use values from the defined preset.
-
-
---gpu-ethash-mode:
-1 - Create 1 buffer for DAG on GPU if driver allows big enough allocation
-2 - Create 2 buffers for DAG on GPU
-
-
---gpu-buffer-mode:
-0 - Leave buffers in memory for both algorithms when switching. Use if you have enough VRAM on the GPU to store all data from both algorithms.
-1 - Recreate buffers when switching algorithms. This way you can 'dual mine' algorithms that together wouldn't fit in VRAM.
 
 
 --gpu-progpow-mode:
@@ -193,47 +177,6 @@ If combined with --msr-use-tweaks parameter, you will use values from the define
 2 - Use kernel 2. This kernel uses VRAM for DAG and ~+150-200mb (depends from used intensity)
 3 - Use kernel 3. This kernel uses VRAM for DAG and ~+300-500mb (depends from used intensity)
 
-
---gpu-autolykos2-preload
-
-Pre-create the dataset/s for the next block/s while mining the current block.
-Additional GPU memory needed.
-Reported hashrate can vary a little bit. Overall it should increase your pool hashrate by a few percent.
-
-There are 2 types of preloading :
-- If you set preload value to 1 it will constantly keep preloading the next block (preferred for 4-8GB gpu's)
-- If you set preload value to > 1 it will preload X number of datasets, and when a block arrives that isn't yet loaded, it will be created so miner can
-start working on it, and then again X number of datasets will get preloaded.
-
-
-Auto-tune tries to find good settings for your GPU's, and it can be controlled with parameter '--gpu-auto-tune'
-Your final results will probably be different every time, that's because auto tune searches for the best settings live, and it's not a predefined value.
-
-Modes:
-
-0: disabled
-1: normal
-2: fast
-3: incrementing
-
-By default auto-tune is disabled and set to '0'. You can enable it by setting '--gpu-auto-tune' value to 1, 2 or 3.
-Sometimes auto-tune won't return you the best settings, and also sometimes it can happen that it won't apply the auto detected settings, so you need to manually set the --gpu-raw-intensity value it returned.
-
-Every GPU thread can be put into auto-tune mode, so you can combine stuff here, for example run a GPU with 2 threads, and set intensity for one of the threads manually, and leave the second on auto-tune.
-
-After getting the result/s (--gpu-intensity), you should set the parameters manually in the batch file and run the miner, even if it will continue mining after the auto tune process is finished.
-It's better to use it only for getting the values and then running the miner in normal mode (not auto tune mode)
-
-
-There are 4 job handling modes available for you when mining multiple algorithms, and they can be set with parameter '--multi-algorithm-job-mode'
-
-0: no redirect
-1: redirect always to a0
-2: redirect to next available algorithm
-3: work on a1 jobs only when a0 doesn't have anything to work on
-
-Job handling is available both to CPU and GPU mined algorithms.
-It is advised to use parameter '--enable-workers-ramp-up', to avoid a potential system crash when all the workers try to allocate their resources at the same time.
 
 
 ==================================================================================================================
