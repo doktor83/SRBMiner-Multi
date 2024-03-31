@@ -30,7 +30,6 @@ I : INTEL GPU
 [1.00%]   [ -  A  N  I ]   autolykos2
 [0.85%]   [ -  A  N  I ]   blake3_alephium
 [1.00%]   [ -  A  N  I ]   blake3_decred
-[0.85%]   [ -  A  N  I ]   blake3_ironfish
 [0.85%]   [ C  -  -  - ]   cpupower
 [0.85%]   [ C  A  -  - ]   cryptonight_ccx
 [0.85%]   [ C  A  N  - ]   cryptonight_gpu
@@ -43,6 +42,7 @@ I : INTEL GPU
 [0.85%]   [ -  A  N  I ]   ethashb3
 [0.85%]   [ -  A  N  I ]   evrprogpow
 [0.85%]   [ -  A  N  I ]   firopow
+[1.00%]   [ -  A  N  I ]   fishhash
 [0.85%]   [ C  -  -  - ]   ghostrider
 [0.85%]   [ -  A  N  I ]   heavyhash
 [0.85%]   [ -  A  N  I ]   karlsenhash
@@ -75,7 +75,6 @@ I : INTEL GPU
 [0.65%]   [ -  A  N  I ]   ubqhash
 [1.00%]   [ -  A  -  - ]   verthash
 [0.85%]   [ C  A  N  I ]   verushash
-[0.85%]   [ C  -  -  - ]   xdag
 [0.85%]   [ C  A  -  - ]   yescrypt
 [0.85%]   [ C  A  -  - ]   yescryptr16
 [0.85%]   [ C  A  -  - ]   yescryptr32
@@ -139,7 +138,7 @@ AMD
 + RX 6500/6600/6650/6700/6750/6800/6900/6950 s
 + RX 5300/5400/5500/5600/5700
 + VEGA 56/64/FE/VII
-+ RX 460/470/480/550/560/570/580/590
++ RX 470/480/570/580/590
 
 ===========================================
 NVIDIA
