@@ -1,5 +1,3 @@
-Generic parameters:
-
 --algorithm value               (algorithm/s to use, separate values with ;)
 --api-enable                    (enable statistics API)
 --api-port value                (port where statistics API is reachable - default 21550)
@@ -8,6 +6,7 @@ Generic parameters:
 --api-miner-restart-url value   (user defined url which accessed in browser triggers miner restart)
 --api-rig-shutdown-url value    (user defined url which accessed in browser triggers computer shutdown)
 --background                    (run miner in background, without console window)
+--bc250                         (enable support for AMD BC-250 mining cards [Linux]
 --busy-wait-recheck             (NVIDIA and INTEL, sets the busy wait recheck value per algorithm, separate values with ; [min 0.01, max 0.99])
 --disable-cpu                   (disable cpu mining)
 --disable-gpu                   (disable gpu mining)
