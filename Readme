@@ -100,6 +100,7 @@ fishhash + sha512_256d_radiant
 fishhash + blake3_alephium
 fishhash + blake3_decred
 fishhash + pyrinhash
+fishhash + karlsenhash
 
 autolykos2 + pyrinhash
 autolykos2 + karlsenhash
