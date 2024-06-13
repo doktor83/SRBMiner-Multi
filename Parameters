@@ -1,3 +1,5 @@
+Generic parameters:
+
 --algorithm value               (algorithm/s to use, separate values with ;)
 --api-enable                    (enable statistics API)
 --api-port value                (port where statistics API is reachable - default 21550)
@@ -53,9 +55,7 @@ Cpu parameters
 --cpu-affinity value            (thread affinity bitmask, hex or decimal value, separate values with ';')
 --cpu-numa-bind value           (force binding of CPU worker threads to a specific NUMA node, separate values with ';')
 --disable-auto-affinity         (disable auto affinity setup)
---disable-cpu-optimisations     (use only SSE2 for cpu mining)
 --disable-huge-pages            (disable usage of huge pages)
---disable-hw-aes                (use only soft AES for cpu mining)
 --disable-msr-tweaks            (disable MSR tweaks(def. is enabled)
 --disable-numa-binding          (disable auto binding to NUMA node/s)
 --force-msr-tweaks              (force usage of MSR tweaks
