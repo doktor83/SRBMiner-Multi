@@ -70,7 +70,6 @@ Gpu parameters
 --gpu-intensity value           (gpu intensity, 0-31 or if > 31 it's treated as raw intensity, separate values with ',')
 --gpu-extra-config value        (additional config for some algorithms, separate values with ',')
 --gpu-off-temperature value     (gpu turn off temperature, separate values with ',')
---gpu-progpow-mode value        (1, 2 or 3. Sets how progpow program is created, separate values with ',')
 --gpu-progpow-safe              (use this if you get a lot of gpu validation errors on progpow algorithms)
 --gpu-table-slow-build          (builds DAG/Datatable slower - might help if GPU's are crashing on DAG/Datatable creation)
 --gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for optimized dual mining, in percent [1-95])
@@ -169,13 +168,6 @@ Bind CPU worker threads to NUMA node id 1 (second NUMA node) with manually set n
 --msr-use-preset:
 can be used to select from 3 predefined presets (0,1,2) of register values. If not used, preset is auto selected.
 If combined with --msr-use-tweaks parameter, you will use values from the defined preset.
-
-
---gpu-progpow-mode:
-1 - Use kernel 1. This kernel uses VRAM for DAG only
-2 - Use kernel 2. This kernel uses VRAM for DAG and ~+150-200mb (depends from used intensity)
-3 - Use kernel 3. This kernel uses VRAM for DAG and ~+300-500mb (depends from used intensity)
-
 
 
 ==================================================================================================================
