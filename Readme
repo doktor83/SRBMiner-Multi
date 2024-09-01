@@ -30,6 +30,7 @@ I : INTEL GPU
 [1.00%]   [ -  A  N  I ]   autolykos2
 [0.85%]   [ -  A  N  I ]   blake3_alephium
 [1.00%]   [ -  A  N  I ]   blake3_decred
+[1.00%]   [ -  A  N  I ]   blocx_autolykos2
 [0.85%]   [ C  -  -  - ]   cpupower
 [0.85%]   [ C  A  -  - ]   cryptonight_ccx
 [0.85%]   [ C  A  N  - ]   cryptonight_gpu
