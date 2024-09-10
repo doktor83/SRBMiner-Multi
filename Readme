@@ -64,6 +64,7 @@ I : INTEL GPU
 [0.85%]   [ -  A  N  I ]   progpow_zano
 [1.00%]   [ C  A  -  - ]   pufferfish2bmb
 [0.85%]   [ -  A  -  I ]   pyrinhash
+[0.85%]   [ -  A  -  I ]   pyrinhashv2
 [0.85%]   [ C  -  -  - ]   randomarq
 [0.85%]   [ C  -  -  - ]   randomepic
 [0.85%]   [ C  -  -  - ]   randomgrft
@@ -102,11 +103,12 @@ I : INTEL GPU
 DUAL MINEABLE ALGORITHMS:
 ===========================================
 
+autolykos2 + pyrinhashv2
+autolykos2 + blake3_decred
 autolykos2 + pyrinhash
 autolykos2 + karlsenhash
 autolykos2 + sha512_256d_radiant
 autolykos2 + blake3_alephium
-autolykos2 + blake3_decred
 autolykos2 + sha256dt
 autolykos2 + heavyhash
 
@@ -128,11 +130,15 @@ ethashb3 + blake3_alephium
 ethashb3 + blake3_decred
 ethashb3 + sha256dt
 
+fishhash + pyrinhashv2
+fishhash + blake3_decred
 fishhash + sha512_256d_radiant
 fishhash + blake3_alephium
-fishhash + blake3_decred
 fishhash + pyrinhash
 fishhash + karlsenhash
+
+karlsenhashv2 + pyrinhashv2
+
 
 ... also ...
 randomepic + any algo
