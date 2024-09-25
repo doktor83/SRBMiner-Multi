@@ -7,6 +7,7 @@ Generic parameters:
 --api-rig-restart-url value     (user defined url which accessed in browser triggers computer restart)
 --api-miner-restart-url value   (user defined url which accessed in browser triggers miner restart)
 --api-rig-shutdown-url value    (user defined url which accessed in browser triggers computer shutdown)
+--autolykos2-preload            (if GPU has enough memory, preloads next dataset)
 --background                    (run miner in background, without console window)
 --bc250                         (enable support for AMD BC-250 mining cards [Linux]
 --busy-wait-recheck             (NVIDIA and INTEL, sets the busy wait recheck value per algorithm, separate values with ; [min 0.01, max 0.99])
