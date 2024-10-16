@@ -29,7 +29,6 @@ I : INTEL GPU
 [1.00%]   [ -  A  N  I ]   astrixhash
 [2.00%]   [ C  A  N  I ]   aurum
 [1.00%]   [ -  A  N  I ]   autolykos2
-[0.85%]   [ -  A  N  I ]   blake3_alephium
 [1.00%]   [ -  A  N  I ]   blake3_decred
 [1.00%]   [ -  A  N  I ]   blocx_autolykos2
 [0.85%]   [ C  -  -  - ]   cpupower
@@ -49,7 +48,6 @@ I : INTEL GPU
 [0.85%]   [ C  -  -  - ]   ghostrider
 [0.85%]   [ -  A  N  I ]   heavyhash
 [2.00%]   [ -  A  N  I ]   hoohash
-[0.85%]   [ -  A  N  I ]   karlsenhash
 [1.00%]   [ -  A  N  I ]   karlsenhashv2
 [0.85%]   [ -  A  N  I ]   kawpow
 [0.85%]   [ C  A  N  - ]   lyra2v2_webchain
@@ -62,16 +60,9 @@ I : INTEL GPU
 [0.85%]   [ -  A  N  I ]   progpow_sero
 [0.85%]   [ -  A  N  I ]   progpow_telestai
 [0.85%]   [ -  A  N  I ]   progpow_veil
-[0.85%]   [ -  A  N  I ]   progpow_veriblock
 [0.85%]   [ -  A  N  I ]   progpow_zano
-[1.00%]   [ C  A  -  - ]   pufferfish2bmb
-[0.85%]   [ -  A  -  I ]   pyrinhash
-[0.85%]   [ -  A  -  I ]   pyrinhashv2
 [0.85%]   [ C  -  -  - ]   randomarq
 [0.85%]   [ C  -  -  - ]   randomepic
-[0.85%]   [ C  -  -  - ]   randomgrft
-[0.85%]   [ C  -  -  - ]   randomkeva
-[0.85%]   [ C  -  -  - ]   randomnevo
 [0.85%]   [ C  -  -  - ]   randomscash
 [0.85%]   [ C  -  -  - ]   randomsfx
 [0.85%]   [ C  -  -  - ]   randomtuske
@@ -79,11 +70,9 @@ I : INTEL GPU
 [0.85%]   [ C  -  -  - ]   randomxeq
 [0.85%]   [ C  -  -  - ]   randomyada
 [0.85%]   [ -  A  N  I ]   sha256dt
-[0.85%]   [ -  A  N  I ]   sha3d
-[0.85%]   [ -  A  N  I ]   sha512_256d_radiant
-[0.65%]   [ -  A  N  I ]   ubqhash
 [1.00%]   [ -  A  N  I ]   verthash
 [0.85%]   [ C  A  N  I ]   verushash
+[1.00%]   [ -  A  N  I ]   walahash
 [2.00%]   [ C  A  -  I ]   xelishash
 [1.50%]   [ C  -  -  - ]   xelishashv2
 [1.50%]   [ C  -  -  - ]   xelishashv2_pepew
@@ -106,43 +95,25 @@ DUAL MINEABLE ALGORITHMS:
 ===========================================
 
 autolykos2 + hoohash
-autolykos2 + pyrinhashv2
 autolykos2 + blake3_decred
-autolykos2 + pyrinhash
-autolykos2 + karlsenhash
-autolykos2 + sha512_256d_radiant
-autolykos2 + blake3_alephium
 autolykos2 + sha256dt
 autolykos2 + heavyhash
 
-etchash + sha512_256d_radiant
-etchash + blake3_alephium
 etchash + blake3_decred
 etchash + sha256dt
 etchash + heavyhash
 
-ethash + sha512_256d_radiant
-ethash + blake3_alephium
 ethash + blake3_decred
 ethash + sha256dt
 ethash + heavyhash
 
-ethashb3 + karlsenhash
-ethashb3 + sha512_256d_radiant
-ethashb3 + blake3_alephium
 ethashb3 + blake3_decred
 ethashb3 + sha256dt
 
 fishhash + hoohash
-fishhash + pyrinhashv2
 fishhash + blake3_decred
-fishhash + sha512_256d_radiant
-fishhash + blake3_alephium
-fishhash + pyrinhash
-fishhash + karlsenhash
 
 karlsenhashv2 + hoohash
-karlsenhashv2 + pyrinhashv2
 
 
 ... also ...
