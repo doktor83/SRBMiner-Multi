@@ -54,6 +54,7 @@ Cpu parameters
 --cpu-threads                   (number of cpu threads to use for mining, separate values with ';')
 --cpu-threads-intensity value   (hashes per worker thread, can be 1, 2 or 4. Def. is 1, separate values with ',')
 --cpu-threads-priority value    (worker thread priority, 1-5 where 5 is highest (def. is 2), separate values with ';')
+--cpu-threads-reduce value      (reduce number of threads used for cpu mining by this value (def. is 0), separate values with ';')
 --cpu-affinity value            (thread affinity bitmask, hex or decimal value, separate values with ';')
 --cpu-numa-bind value           (force binding of CPU worker threads to a specific NUMA node, separate values with ';')
 --disable-auto-affinity         (disable auto affinity setup)
