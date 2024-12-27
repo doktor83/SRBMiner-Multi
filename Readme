@@ -112,8 +112,9 @@ ethash + heavyhash
 ethashb3 + blake3_decred
 ethashb3 + sha256dt
 
-fishhash + hoohash
 fishhash + blake3_decred
+fishhash + hoohash
+fishhash + walahash
 
 karlsenhashv2 + hoohash
 karlsenhashv2 + blake3_decred
