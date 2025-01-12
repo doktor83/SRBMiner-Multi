@@ -96,18 +96,19 @@ I : INTEL GPU
 DUAL MINEABLE ALGORITHMS:
 ===========================================
 
-autolykos2 + hoohash
-autolykos2 + blake3_decred
-autolykos2 + sha256dt
-autolykos2 + heavyhash
+autolykos2/blocx + walahash
+autolykos2/blocx + hoohash
+autolykos2/blocx + blake3_decred
+autolykos2/blocx + heavyhash
+autolykos2/blocx + sha256dt
 
 etchash + blake3_decred
-etchash + sha256dt
 etchash + heavyhash
+etchash + sha256dt
 
 ethash + blake3_decred
-ethash + sha256dt
 ethash + heavyhash
+ethash + sha256dt
 
 ethashb3 + blake3_decred
 ethashb3 + sha256dt
