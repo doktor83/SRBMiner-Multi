@@ -32,6 +32,7 @@ I : INTEL GPU
 [1.00%]   [ -  A  N  I ]   blake3_decred
 [1.00%]   [ -  A  N  I ]   blocx_autolykos2
 [0.85%]   [ C  -  -  - ]   cpupower
+[1.00%]   [ -  A  N  I ]   cryptixhash
 [0.85%]   [ C  A  -  - ]   cryptonight_ccx
 [0.85%]   [ C  A  N  - ]   cryptonight_gpu
 [0.85%]   [ C  A  -  - ]   cryptonight_turtle
@@ -57,6 +58,7 @@ I : INTEL GPU
 [0.85%]   [ C  -  -  - ]   minotaurx
 [1.00%]   [ -  A  N  I ]   nxlhash
 [0.85%]   [ C  -  -  - ]   panthera
+[0.85%]   [ -  A  N  I ]   phihash
 [0.85%]   [ -  A  N  I ]   progpow_epic
 [0.85%]   [ -  A  N  I ]   progpow_quai
 [0.85%]   [ -  A  N  I ]   progpow_sero
@@ -143,6 +145,7 @@ AMD
 NVIDIA
 ===========================================
 
++ Blackwell
 + Hopper
 + Ada Lovelace
 + Ampere 
