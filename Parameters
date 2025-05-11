@@ -20,7 +20,7 @@ Generic parameters:
 --disable-extranonce-subscribe  (don't send mining.extranonce.subscribe to pool)
 --disable-worker-watchdog       (disable crash detection)
 --disable-ptx-check             (disable nvidia ptx version check)
---dns-over-https                (0 - Google, 1 - Cloudflare, 2 - AhADNS, 3 - Belnet)
+--dns-over-https                (0 - Google, 1 - Cloudflare, 2 - Belnet)
 --enable-restart-on-rejected    (enable miner auto restart on too many rejected shares. Set number with --max-rejected-shares)
 --enable-workers-ramp-up        (enable GPU workers slow start)
 --extended-log                  (enable more informative logging)
@@ -95,16 +95,9 @@ Gpu OC parameters
 --gpu-moffset1                  (A1 - set memory clock offset (in MHZ), separate values with ',' [NVIDIA only])
 --gpu-plimit1                   (A1 - set power management limit (in W), separate values with ',' [NVIDIA only])
 --gpu-fan1                      (A1 - set fan speed (in %), separate values with ',' [NVIDIA only])
---zil-cclock                    (ZIL - set fixed core clock (in MHZ), separate values with ',' [NVIDIA only])
---zil-mclock                    (ZIL - set fixed memory clock (in MHZ), separate values with ',' [NVIDIA only])
---zil-coffset                   (ZIL - set core clock offset (in MHZ), separate values with ',' [NVIDIA only])
---zil-moffset                   (ZIL - set memory clock offset (in MHZ), separate values with ',' [NVIDIA only])
---zil-plimit                    (ZIL - set power management limit (in W), separate values with ',' [NVIDIA only])
---zil-fan                       (ZIL - set fan speed (in %), separate values with ',' [NVIDIA only])
 --a0-oc-script filename         (run script when algorithm 0 becomes active - set OC)
 --a1-oc-script filename         (run script when algorithm 1 becomes active - set OC)
---zil-oc-script filename        (run script when ZIL mining becomes active - set OC)
---oc-delay value                (delay in seconds after A0, A1 or ZIL OC was applied. Def. is 3, max is 120)
+--oc-delay value                (delay in seconds after A0 or A1 OC was applied. Def. is 3, max is 120)
 
 
 Pool parameters
@@ -120,16 +113,6 @@ Pool parameters
 --job-timeout value             (time, if no job received for this period, miner will reconnect. Disabled by default, separate values with ',')
 --keepalive value               (true or false, not every pool supports this, separate values with ',')
 --send-stales value             (send stale shares to pool, true or false, separate values with ',')
-
-
-ZIL mining parameters
-
---zil-enable                    (enable ZIL only mining)
---zil-epoch value               (ZIL epoch number. Default is 1)
---zil-pool value                (ZIL pool address:port, separate values with ',')
---zil-wallet value              (ZIL wallet address, separate values with ',')
---zil-password value            (ZIL pool password, separate values with ',')
---zil-esm value                 (ZIL pool ethereum stratum mode, separate values with ',')
 
 
 Parameter aliases
