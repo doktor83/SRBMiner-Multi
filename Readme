@@ -108,12 +108,12 @@ fishhash + walahash
 fishhash + blake3_decred
 fishhash + hoohash
 
-autolykos2/blocx + cryptixhash
-autolykos2/blocx + walahash
-autolykos2/blocx + hoohash
-autolykos2/blocx + blake3_decred
-autolykos2/blocx + heavyhash
-autolykos2/blocx + sha256dt
+autolykos2 + cryptixhash
+autolykos2 + walahash
+autolykos2 + hoohash
+autolykos2 + blake3_decred
+autolykos2 + heavyhash
+autolykos2 + sha256dt
 
 etchash + blake3_decred
 etchash + heavyhash
