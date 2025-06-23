@@ -42,7 +42,6 @@ I : INTEL GPU
 [0.65%]   [ -  A  N  I ]   ethash
 [0.85%]   [ -  A  N  I ]   ethashb3
 [2.00%]   [ -  A  N  I ]   ethashr5
-[1.00%]   [ C  -  -  - ]   evohash
 [0.85%]   [ -  A  N  I ]   evrprogpow
 [0.85%]   [ -  A  N  I ]   firopow
 [0.85%]   [ -  A  N  I ]   fishhash
@@ -104,13 +103,11 @@ DUAL MINEABLE ALGORITHMS:
 ===========================================
 
 fishhash + sha3x
-fishhash + cryptixhash
 fishhash + walahash
 fishhash + blake3_decred
 fishhash + hoohash
 
 autolykos2 + sha3x
-autolykos2 + cryptixhash
 autolykos2 + walahash
 autolykos2 + hoohash
 autolykos2 + blake3_decred
