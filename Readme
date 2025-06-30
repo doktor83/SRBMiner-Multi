@@ -49,7 +49,6 @@ I : INTEL GPU
 [1.00%]   [ -  A  N  I ]   fphash
 [0.85%]   [ C  -  -  - ]   ghostrider
 [0.85%]   [ -  A  N  I ]   heavyhash
-[2.00%]   [ -  A  N  I ]   hoohash
 [1.00%]   [ -  A  N  I ]   karlsenhashv2
 [0.85%]   [ -  A  N  I ]   kawpow
 [0.85%]   [ C  A  N  - ]   lyra2v2_webchain
@@ -105,11 +104,9 @@ DUAL MINEABLE ALGORITHMS:
 fishhash + sha3x
 fishhash + walahash
 fishhash + blake3_decred
-fishhash + hoohash
 
 autolykos2 + sha3x
 autolykos2 + walahash
-autolykos2 + hoohash
 autolykos2 + blake3_decred
 autolykos2 + heavyhash
 autolykos2 + sha256dt
@@ -125,7 +122,6 @@ ethash + sha256dt
 ethashb3 + blake3_decred
 ethashb3 + sha256dt
 
-karlsenhashv2 + hoohash
 karlsenhashv2 + blake3_decred
 
 
