@@ -28,7 +28,6 @@ I : INTEL GPU
 [0.85%]   [ C  A  -  - ]   argon2id_chukwa2
 [1.00%]   [ -  A  N  I ]   autolykos2
 [1.00%]   [ -  A  N  I ]   blake3_decred
-[2.00%]   [ -  A  N  I ]   blake3_lbrt
 [0.85%]   [ C  -  -  - ]   cpupower
 [0.85%]   [ C  A  -  - ]   cryptonight_ccx
 [0.85%]   [ C  A  N  I ]   cryptonight_gpu
@@ -72,7 +71,6 @@ I : INTEL GPU
 [1.00%]   [ C  -  -  - ]   randomy
 [0.85%]   [ C  -  -  - ]   randomyada
 [1.00%]   [ C  -  -  - ]   rinhash
-[0.85%]   [ -  A  N  I ]   sha256dt
 [0.65%]   [ -  A  N  I ]   sha3x
 [1.00%]   [ -  A  N  I ]   verthash
 [0.85%]   [ C  -  -  - ]   verushash
@@ -108,15 +106,12 @@ autolykos2 + sha3x
 autolykos2 + walahash
 autolykos2 + blake3_decred
 autolykos2 + heavyhash
-autolykos2 + sha256dt
 
 etchash + blake3_decred
 etchash + heavyhash
-etchash + sha256dt
 
 ethash + blake3_decred
 ethash + heavyhash
-ethash + sha256dt
 
 karlsenhashv2 + blake3_decred
 
