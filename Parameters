@@ -19,7 +19,6 @@ Generic parameters:
 --disable-gpu-dual-kernels      (disable usage of optimised dual kernels)
 --disable-extranonce-subscribe  (don't send mining.extranonce.subscribe to pool)
 --disable-worker-watchdog       (disable crash detection)
---disable-ptx-check             (disable nvidia ptx version check)
 --dns-over-https                (0 - Google, 1 - Cloudflare, 2 - Belnet, 3 - Dns0)
 --enable-restart-on-rejected    (enable miner auto restart on too many rejected shares. Set number with --max-rejected-shares)
 --enable-workers-ramp-up        (enable GPU workers slow start)
