@@ -79,6 +79,7 @@ I : INTEL GPU
 [1.00%]   [ -  A  N  I ]   walahash
 [1.50%]   [ C  -  -  - ]   xelishashv2
 [1.50%]   [ C  -  -  - ]   xelishashv2_pepew
+[1.50%]   [ C  -  -  - ]   xelishashv3
 [3.00%]   [ -  A  N  I ]   xhash
 [0.85%]   [ C  A  -  - ]   yescrypt
 [0.85%]   [ C  A  -  - ]   yescryptr16
@@ -117,6 +118,8 @@ ethash + blake3_decred
 ethash + heavyhash
 
 karlsenhashv2 + blake3_decred
+
+xhash + blake3_decred
 
 
 ... also ...
