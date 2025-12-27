@@ -1,0 +1,8 @@
+--gpu-tweak-profile
+--gpu-intensity
+--gpu-mclock
+--gpu-cclock
+--threads
+--cpu-priority
+--gpu-progpow-mode
+--force-msr-tweaks
