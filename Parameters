@@ -121,6 +121,9 @@ Parameter aliases
 --password                      -p
 --pool                          -o
 --wallet                        -u
+
+
+: Separate algorithms with ; and values inside an algorithm with ,
 : Parameters that take a TIME value must be set in SECONDS!
 
 Note:
