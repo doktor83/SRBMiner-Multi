@@ -56,6 +56,7 @@ I : INTEL GPU
 [0.85%]   [ -  A  N  I ]   progpow_sero
 [0.85%]   [ -  A  N  I ]   progpow_telestai
 [0.85%]   [ -  A  N  I ]   progpow_zano
+[1.50%]   [ -  A  N  I ]   qhash
 [1.00%]   [ C  -  -  - ]   randomalpha
 [0.85%]   [ C  -  -  - ]   randomarq
 [0.85%]   [ C  -  -  - ]   randomc64
@@ -100,10 +101,12 @@ I : INTEL GPU
 DUAL MINEABLE ALGORITHMS:
 ===========================================
 
+fishhash + qhash
 fishhash + sha3x
 fishhash + walahash
 fishhash + blake3_decred
 
+autolykos2 + qhash
 autolykos2 + sha3x
 autolykos2 + walahash
 autolykos2 + blake3_decred
