@@ -120,6 +120,7 @@ ethash + heavyhash
 
 karlsenhashv2 + blake3_decred
 
+xhash + qhash
 xhash + blake3_decred
 
 
