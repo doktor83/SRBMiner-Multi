@@ -1,5 +1,8 @@
 ***DUAL MINING***
 -------------------------------------------------------------------------------
+**Xhash + Qhash :**  
+*--algorithm xhash --pool parallax-pool-here --wallet parallax-wallet-here --algorithm qhash --pool qtc-pool-here --wallet qtc-wallet-here*
+
 **Fishhash + Qhash :**  
 *--algorithm fishhash --pool ironfish-pool-here --wallet ironfish-wallet-here --algorithm qhash --pool qtc-pool-here --wallet qtc-wallet-here*
 
