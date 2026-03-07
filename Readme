@@ -79,11 +79,11 @@ I : INTEL GPU
 [1.50%]   [ C  -  -  - ]   xelishashv2_pepew
 [1.50%]   [ C  A  N  I ]   xelishashv3
 [3.00%]   [ -  A  N  I ]   xhash
-[0.85%]   [ C  A  -  - ]   yescrypt
-[0.85%]   [ C  A  -  - ]   yescryptr16
-[0.85%]   [ C  A  -  - ]   yescryptr32
+[0.85%]   [ C  A  N  - ]   yescrypt
+[0.85%]   [ C  -  -  - ]   yescryptr16
+[0.85%]   [ C  -  -  - ]   yescryptr32
 [0.85%]   [ C  A  -  - ]   yescryptr8
-[0.85%]   [ C  -  -  - ]   yespower
+[0.85%]   [ C  -  N  - ]   yespower
 [0.85%]   [ C  -  -  - ]   yespower2b
 [0.85%]   [ C  -  -  - ]   yespoweradvc
 [2.00%]   [ C  -  -  - ]   yespowereqpay
@@ -94,7 +94,7 @@ I : INTEL GPU
 [0.85%]   [ C  -  -  - ]   yespowermwc
 [0.85%]   [ C  -  -  - ]   yespowerr16
 [0.85%]   [ C  -  -  - ]   yespowersugar
-[0.85%]   [ C  -  -  - ]   yespowertide
+[0.85%]   [ C  -  N  - ]   yespowertide
 [0.00%]   [ C  -  -  - ]   yespowerurx
 
 ===========================================
