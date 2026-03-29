@@ -1,12 +1,15 @@
 Generic parameters:
 
 --algorithm value               (algorithm/s to use, separate values with ;)
+--algorithm-gpu value           (gpu-only algorithm/s, separate values with ;)
+--algorithm-cpu value           (cpu-only algorithm/s, separate values with ;)
 --api-enable                    (enable statistics API)
 --api-port value                (port where statistics API is reachable - default 21550)
 --api-rig-name value            (identifier name for your rig in statistics API)
 --api-rig-restart-url value     (user defined url which accessed in browser triggers computer restart)
 --api-miner-restart-url value   (user defined url which accessed in browser triggers miner restart)
 --api-rig-shutdown-url value    (user defined url which accessed in browser triggers computer shutdown)
+--autotune-no-load              (disable automatic save/load of GPU autotune results)
 --autolykos2-preload            (if GPU has enough memory, preloads next dataset)
 --background                    (run miner in background, without console window)
 --bc250                         (enable support for AMD BC-250 mining cards [Linux]
@@ -60,10 +63,10 @@ Cpu parameters
 --disable-auto-affinity         (disable auto affinity setup)
 --disable-huge-pages            (disable usage of huge pages)
 --disable-msr-tweaks            (disable MSR tweaks(def. is enabled)
---disable-numa-binding          (disable auto binding to NUMA node/s)
 --force-msr-tweaks              (force usage of MSR tweaks
 --msr-use-preset value          (defines MSR preset to use 0-3)
 --msr-use-tweaks value          (defines MSR tweaks to use 0-4, | 0 - Intel, 0,1,2,3,4 - AMD |)
+--disable-numa-binding          (disable auto binding to NUMA node/s)
 
 
 Gpu parameters
@@ -117,6 +120,8 @@ Pool parameters
 Parameter aliases
 
 --algorithm                     -a
+--algorithm-gpu                 -ag
+--algorithm-cpu                 -ac
 --cpu-threads                   -t
 --password                      -p
 --pool                          -o
@@ -124,6 +129,7 @@ Parameter aliases
 
 
 : Separate algorithms with ; and values inside an algorithm with ,
+: Use either --algorithm or the pair --algorithm-gpu/--algorithm-cpu
 : Parameters that take a TIME value must be set in SECONDS!
 
 Note:
