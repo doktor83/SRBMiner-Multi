@@ -137,6 +137,10 @@ If you want to apply different values for GPU's (OC or any other parameter that 
 For example:
 ... --gpu-id 0,1,2,3,4 --gpu-intensity 100,200,300,400,500 --gpu-cclock 1300,1400,1500,1600
 
+Mixed CPU/GPU mining:
+Order of parameters matters!
+If you define --algorithm-cpu first then the first occurences of --pool, --wallet ... etc will be used for the algorithm defined in first --algorithm-cpu
+
 ==================================================================================================================
 
 --log-file-mode:
