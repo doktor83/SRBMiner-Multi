@@ -77,6 +77,7 @@ Gpu parameters
 --gpu-off-temperature value     (gpu turn off temperature, separate values with ',')
 --gpu-progpow-safe              (use this if you get a lot of gpu validation errors on progpow algorithms)
 --gpu-table-slow-build          (builds DAG/Datatable slower - might help if GPU's are crashing on DAG/Datatable creation)
+--pearl-k2                      (second kernel, separate values with ',')
 --gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for optimized dual mining, in percent [1-95])
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
 
