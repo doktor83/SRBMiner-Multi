@@ -51,6 +51,7 @@ Generic parameters:
 Cpu parameters
 
 --cpu-threads                   (number of cpu threads to use for mining, separate values with ';')
+--cpu-threads-percent value     (cpu threads percentage hint in range 1-100, separate values with ';')
 --cpu-threads-intensity value   (hashes per worker thread, can be 1, 2 or 4. Def. is 1, separate values with ',')
 --cpu-threads-priority value    (worker thread priority, 1-5 where 5 is highest (def. is 2), separate values with ';')
 --cpu-threads-reduce value      (reduce number of threads used for cpu mining by this value (def. is 0), separate values with ';')
