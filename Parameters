@@ -36,6 +36,7 @@ Generic parameters:
 --max-no-share-sent value       (time, if no share is accepted from the pool for x time, restarts miner [def. is 0 - disabled])
 --max-rejected-shares value     (max number of allowed rejected shares on a connection. def. is 15 if '--enable-restart-on-rejected' option enabled)
 --miner-priority value          (main process priority, 1-5 where 5 is highest [def. is 3 - normal])
+--noid-no-pause                 (keep GPUs hashing the last job during pool pauses [paused results are discarded])
 --proxy value                   (ip:port or user:password@ip:port of socks5 proxy)
 --randomx-use-1gb-pages         (Allocate 1GB sized pages)
 --reboot-script-gpu-watchdog    (filename, if set it turns off built in restart procedure on gpu failure, and instead runs this script)
