@@ -110,6 +110,7 @@ Pool parameters
 --password value                (pool password, separate values with ; and ! [use #; and #! to escape separator characters])
 --diff-factor value             (custom difficulty multiplier, separate values with ',')
 --tls value                     (use TLS, true or false, separate values with ',')
+--tls-cert-sha256 value         (Quantus node QUIC; DER certificate SHA256 pin, --wallet is the auth token)
 --esm value                     (ethash stratum mode [0 (getwork), 1 (ethereumstratum 1.0), 2 (ethereumstratum 1.0 + nicehash)], separate values with ',')
 --nicehash value                (force nicehash, true or false, separate values with ',')
 --job-timeout value             (time, if no job received for this period, miner will reconnect. Disabled by default, separate values with ',')
