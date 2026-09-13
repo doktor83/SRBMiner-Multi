@@ -40,7 +40,7 @@ Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU minin
 [0.85%]   [ -  A  N  I ]   meowpow
 [0.85%]   [ C  -  -  - ]   mike
 [0.85%]   [ C  -  -  - ]   minotaurx
-[3.00%]   [ -  A  N  - ]   noid
+[2.00%]   [ -  A  N  - ]   noid
 [0.85%]   [ -  A  N  I ]   oggpow
 [0.85%]   [ C  -  -  - ]   panthera
 [2.00%]   [ -  A  N  - ]   pearlhash
@@ -48,7 +48,7 @@ Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU minin
 [0.85%]   [ -  A  N  I ]   progpow_epic
 [0.85%]   [ -  A  N  I ]   progpow_zano
 [1.50%]   [ -  A  N  I ]   qhash
-[2.50%]   [ -  A  N  - ]   quantus
+[2.00%]   [ -  A  N  - ]   quantus
 [1.00%]   [ C  -  -  - ]   randomalpha
 [0.85%]   [ C  -  -  - ]   randomarq
 [0.85%]   [ C  -  -  - ]   randomc64
