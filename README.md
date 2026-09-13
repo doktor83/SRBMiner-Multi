@@ -1,27 +1,22 @@
-SRBMiner-MULTI AMD & NVIDIA & INTEL & CPU cryptocurrency miner
------------------------------------------
-Cryptocurrency miner
+# SRBMiner-MULTI cryptocurrency miner
 
-Mine up to 4 different algorithms/coins at the same time!
+Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU mining.
 
+**Mine up to 4 different algorithms/coins at the same time!**
 
-Download :
-https://www.srbminer.com/download.html
-https://github.com/doktor83/SRBMiner-Multi
+## DOWNLOAD
 
+- [Official website](https://www.srbminer.com/download.html)
+- [GitHub repository](https://github.com/doktor83/SRBMiner-Multi)
 
-Support :
-https://discord.gg/zXY23De
-https://bitcointalk.org/index.php?topic=5190081.0
+## ALGORITHMS
 
+- `C` — CPU
+- `A` — AMD GPU
+- `N` — NVIDIA GPU
+- `I` — Intel GPU
 
-[SUPPORTED ALGORITHMS]
-
-C : CPU
-A : AMD GPU
-N : NVIDIA GPU
-I : INTEL GPU
-
+```text
 [0.85%]   [ C  A  -  - ]   argon2d_16000
 [0.85%]   [ C  A  -  - ]   argon2d_dynamic
 [3.00%]   [ C  A  N  - ]   argon2id_exfer
@@ -91,61 +86,71 @@ I : INTEL GPU
 [0.85%]   [ C  -  -  - ]   yespowersugar
 [0.85%]   [ C  -  N  - ]   yespowertide
 [0.00%]   [ C  -  -  - ]   yespowerurx
+```
 
-===========================================
-DUAL MINEABLE ALGORITHMS:
-===========================================
+## DUAL MINEABLE ALGORITHMS
 
-fishhash + qhash
-fishhash + blake3_decred
+- `fishhash` + `qhash`
+- `fishhash` + `blake3_decred`
+- `autolykos2` + `qhash`
+- `autolykos2` + `blake3_decred`
+- `autolykos2` + `heavyhash`
+- `etchash` + `blake3_decred`
+- `etchash` + `heavyhash`
+- `ethash` + `blake3_decred`
+- `ethash` + `heavyhash`
+- `xhash` + `qhash`
+- `xhash` + `blake3_decred`
 
-autolykos2 + qhash
-autolykos2 + blake3_decred
-autolykos2 + heavyhash
+Additionally:
 
-etchash + blake3_decred
-etchash + heavyhash
-
-ethash + blake3_decred
-ethash + heavyhash
-
-xhash + qhash
-xhash + blake3_decred
+- `randomepic` + any algorithm
+- `progpow_epic` + any algorithm
 
 
-... also ...
-randomepic + any algo
-progpow_epic + any algo
+## SUPPORTED GPUs
 
-===========================================
-SUPPORTED GPU'S
+### AMD
 
-===========================================
-AMD
-===========================================
+- RX 9xxx
+- RX 7xxx
+- RX 6xxx
+- RX 5xxx
+- VEGA 56/64/FE/VII
+- RX 470/480/570/580/590
+- BC-250
 
-+ RX 9xxx
-+ RX 7xxx
-+ RX 6xxx
-+ RX 5xxx
-+ VEGA 56/64/FE/VII
-+ RX 470/480/570/580/590
-+ BC-250
+### NVIDIA
 
-===========================================
-NVIDIA
-===========================================
+- Blackwell
+- Hopper
+- Ada Lovelace
+- Ampere
+- Turing
+- Pascal
 
-+ Blackwell
-+ Hopper
-+ Ada Lovelace
-+ Ampere 
-+ Turing
-+ Pascal
+### INTEL
 
-==================================================================
-INTEL
-==================================================================
+- Battlemage
+- Alchemist
 
-+ Battlemage
-+ Alchemist
+
+## SUPPORT
+
+- [Discord](https://discord.gg/zXY23De)
+- [BitcoinTalk](https://bitcointalk.org/index.php?topic=5190081.0)
+
+
+## LICENSE
+
+Copyright © **doktor83**. All rights reserved.
+
+This software may be used only for lawful cryptocurrency mining on hardware or systems that you own or are authorized to use. You are solely responsible for complying with all applicable laws, regulations, network rules and third-party terms.
+
+All embedded or precompiled GPU binaries and machine code distributed with SRBMiner-MULTI are proprietary. They may be executed only as part of an official or otherwise expressly authorized SRBMiner-MULTI release.
+
+Extracting, copying, modifying, reverse engineering, decompiling, disassembling, redistributing, sublicensing, selling, publishing, incorporating into another product or otherwise using these binaries without prior written permission from the copyright holder is prohibited, except where applicable law provides otherwise.
+
+Third-party components remain subject to their respective licenses.
+
+THIS SOFTWARE IS PROVIDED **“AS IS”**, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.
