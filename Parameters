@@ -16,6 +16,7 @@ Generic parameters:
 --disable-gpu-amd               (disable gpu mining with AMD gpu's)
 --disable-gpu-nvidia            (disable gpu mining with NVIDIA gpu's)
 --disable-gpu-intel             (disable gpu mining with INTEL gpu's)
+--enable-igpu                   (enable mining on integrated GPUs, disabled by default)
 --disable-gpu-dual-kernels      (disable usage of optimised dual kernels)
 --disable-extranonce-subscribe  (don't send mining.extranonce.subscribe to pool)
 --disable-worker-watchdog       (disable crash detection)
