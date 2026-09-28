@@ -48,7 +48,7 @@ Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU minin
 [0.85%]   [ -  A  N  I ]   progpow_epic
 [0.85%]   [ -  A  N  I ]   progpow_zano
 [1.50%]   [ -  A  N  I ]   qhash
-[2.00%]   [ -  A  N  - ]   quantus
+[2.00%]   [ -  A  N  I ]   quantus
 [1.00%]   [ C  -  -  - ]   randomalpha
 [0.85%]   [ C  -  -  - ]   randomarq
 [0.85%]   [ C  -  -  - ]   randomc64
