@@ -9,7 +9,6 @@ Generic parameters:
 --autotune-no-load              (disable automatic save/load of GPU autotune results)
 --autolykos2-preload            (if GPU has enough memory, preloads next dataset)
 --background                    (run miner in background, without console window)
---bc250                         (enable support for AMD BC-250 mining cards [Linux]
 --busy-wait-recheck             (NVIDIA and INTEL, sets the busy wait recheck value per algorithm, separate values with ; [min 0.01, max 0.99])
 --disable-cpu                   (disable cpu mining)
 --disable-gpu                   (disable gpu mining)
@@ -37,7 +36,6 @@ Generic parameters:
 --max-no-share-sent value       (time, if no share is accepted from the pool for x time, restarts miner [def. is 0 - disabled])
 --max-rejected-shares value     (max number of allowed rejected shares on a connection. def. is 15 if '--enable-restart-on-rejected' option enabled)
 --miner-priority value          (main process priority, 1-5 where 5 is highest [def. is 3 - normal])
---noid-no-pause                 (keep GPUs hashing the last job during pool pauses [paused results are discarded])
 --proxy value                   (ip:port or user:password@ip:port of socks5 proxy)
 --randomx-use-1gb-pages         (Allocate 1GB sized pages)
 --reboot-script-gpu-watchdog    (filename, if set it turns off built in restart procedure on gpu failure, and instead runs this script)
@@ -74,9 +72,9 @@ Gpu parameters
 --gpu-intensity value           (gpu intensity, 0-31 or if > 31 it's treated as raw intensity, separate values with ',')
 --gpu-extra-config value        (additional config for some algorithms, separate values with ',')
 --gpu-off-temperature value     (gpu turn off temperature, separate values with ',')
---gpu-progpow-safe              (use this if you get a lot of gpu validation errors on progpow algorithms)
 --gpu-table-slow-build          (builds DAG/Datatable slower - might help if GPU's are crashing on DAG/Datatable creation)
---pearl-k2                      (second kernel, use comma separated GPU ids)
+--pearl-k1 [GPU ids]            (alternative kernel where available; comma separated ids, omit ids for all GPUs)
+--pearl-k2 [GPU ids]            (alternative kernel where available; comma separated ids, omit ids for all GPUs)
 --gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for optimized dual mining, in percent [1-95])
 --gpu-disable-interleaving      (disable interleaving of threads when running more than 2 threads per GPU)
 
