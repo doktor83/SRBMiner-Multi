@@ -81,6 +81,7 @@ Gpu OC parameters
 
 --gpu-disable-oc                (disable OC functionality)
 --gpu-power-tuner [ids]         (enable NVIDIA power fine-tuning, separate values with ',' [NVIDIA only])
+--gpu-power-tuner-reset [ids]   (delete saved power tuning for current OC; does not enable tuning [NVIDIA only])
 --gpu-power-tuner-loss value(s) (allowed hashrate loss %, 1-25, default 2.5, separate values with ',' [NVIDIA only])
 --gpu-reset-oc                  (reset default OC values on miner start [NVIDIA only])
 --gpu-cclock0                   (A0 - set fixed core clock (in MHZ), separate values with ',' [NVIDIA only])
@@ -300,6 +301,23 @@ Keep --gpu-power-tuner enabled on later starts to load the saved result for the 
 
 The console reports when tuning finishes and is saved, or when a saved configuration for the current OC is loaded.
 Changes to OC, algorithm, intensity or loss limit can trigger fresh tuning.
+Changing the miner version alone does not discard a matching power-tuning result.
+
+Reset saved tuning for the current OC:
+
+--gpu-power-tuner-reset         Delete the current OC profile for all NVIDIA GPUs selected for mining.
+--gpu-power-tuner-reset 0,2     Delete the current OC profiles for GPU 0 and GPU 2 only.
+
+Use the same algorithm, OC, intensity and loss settings as the saved profile you want to reset.
+Other saved OC profiles and intensity tuning results are kept. Deletion happens after OC setup and intensity are known.
+The reset parameter does not enable tuning or apply saved tuning values. Only --gpu-power-tuner enables those actions.
+To delete the current profile and immediately tune again, use both parameters, for example:
+
+--gpu-power-tuner 0,2 --gpu-power-tuner-reset 0,2
+
+Remove --gpu-power-tuner-reset on later manual starts to reuse the newly saved results.
+Once all requested resets are complete, SRB removes the reset parameter from its own restart command.
+Mining OS agents may reuse the original command; a saved recovery-session marker prevents repeated resets there too.
 
 If the tuner is skipped or stops, read its console message. Check privileges, GPU selection, the core clock lock and GPU/driver support first.
 Also check that your requested OC was applied successfully and that the GPU is not overheating or being changed by another OC tool.
