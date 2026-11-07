@@ -192,3 +192,114 @@ This should be a unique string, which accessed in browser results in a computer 
 --api-miner-restart-url
 This should be a unique string, which accessed in browser restarts SRBMiner-MULTI.
 
+
+==================================================================================================================
+Efficiency fine-tuner (Linux / Windows, NVIDIA; root / administrator required):
+
+The power tuner tries to reduce power consumption while keeping as much of your hashrate as possible.
+It fine-tunes your existing OC (overclock settings) and chooses a result based on hashrate per watt.
+The goal is better efficiency: doing more mining work for each watt of power used.
+It does not find your starting core clock, memory clock or offset for you. You must choose stable starting settings first.
+The feature is experimental, including Windows support (tested on Windows 10).
+
+Before you start:
+
+- Use a supported NVIDIA GPU and driver. Unsupported GPU/driver combinations are skipped.
+  NVIDIA driver 595 or 615 is recommended.
+- On Linux, run the miner as root. On Windows, run it as administrator.
+- A fixed/locked core clock is required, for example through --gpu-cclock.
+  GPUs using automatic/stock core clocks are skipped. Setting only --gpu-coffset is not enough to lock the core clock.
+- Use one mining algorithm and one mining thread per GPU. Multiple algorithms or multiple mining threads on a GPU are not supported by the tuner.
+- Keep GPU mining and OC control enabled. --gpu-disable-oc disables the power tuner.
+
+Start with conservative OC settings:
+
+Do not start with a very high --gpu-cclock or --gpu-coffset value. Leave some room below the GPU's stability limit.
+If your current OC is already "at the edge" of stability, lower the core clock and/or core offset before enabling the tuner.
+Settings that only just work without tuning can become unstable when the tuner tries to reduce power further.
+First check that your starting OC mines reliably without --gpu-power-tuner, then enable it.
+
+Results vary between individual GPUs, even with the same model and OC, because of differences in silicon quality.
+Another person's clocks, offsets or tuning result may not work on your GPU.
+
+It is recommended to set your OC through the miner's parameters and include --gpu-reset-oc.
+--gpu-reset-oc resets OC to defaults on startup before the miner applies your requested settings.
+This helps the miner manage GPU resets and restore your OC more reliably during recovery.
+Avoid changing clocks or offsets with another tool while tuning is running.
+
+Choose which GPUs to tune:
+
+Use the GPU IDs shown by --list-devices. These GPUs must also be selected for mining.
+--gpu-id chooses which GPUs mine; --gpu-power-tuner chooses which of those GPUs are tuned.
+Selecting a GPU for tuning does not automatically select it for mining.
+
+--gpu-power-tuner               Tune all eligible NVIDIA GPUs selected for mining.
+--gpu-power-tuner 1             Tune GPU 1 only.
+--gpu-power-tuner 0,2           Tune GPUs 0 and 2 only.
+
+For the best and safest results, tune GPUs one at a time.
+A crash on one GPU can affect other GPUs in the same miner process, making it harder to identify the GPU that caused the failure.
+
+Simple starting procedure:
+
+1. Run --list-devices and find the ID of the GPU you want to tune.
+2. Set a conservative fixed core clock and, if used, core offset in your normal mining command. Check that mining is stable.
+3. Add the following options to that command (this example tunes GPU 0, which must be selected for mining):
+
+   --gpu-reset-oc --gpu-power-tuner 0 --gpu-power-tuner-loss 2.5
+
+4. Start the miner as root/administrator and let it finish tuning. Do not keep changing the OC during the process.
+5. After tuning finishes, keep mining and check stability over a longer period.
+
+Choose how much hashrate loss is acceptable:
+
+--gpu-power-tuner-loss sets the maximum allowed hashrate loss when choosing the tuning result.
+The range is 1-25%, the default is 2.5%, and decimal values with up to two decimal places are supported. Use a dot for decimals.
+
+For example, if your starting speed is 100 MH/s, a 2.5% limit allows a result around 97.5 MH/s or higher if it improves efficiency.
+This is a limit, not a target: the tuner does not have to reduce your hashrate by that amount.
+
+Higher values allow it to consider larger hashrate reductions for potentially greater power savings.
+The limit does not prevent temporary hashrate drops or downtime while testing settings or recovering from a crash.
+
+One value applies to every GPU selected for tuning:
+--gpu-power-tuner 0,1,5 --gpu-power-tuner-loss 2
+This allows up to 2% loss on each of GPUs 0, 1 and 5.
+
+To use a different limit for each GPU, provide explicit IDs after --gpu-power-tuner and one loss value for each ID, in the same order:
+--gpu-power-tuner 0,1,5 --gpu-power-tuner-loss 2,1,3.5
+This allows up to 2% loss on GPU 0, 1% on GPU 1 and 3.5% on GPU 5.
+
+The loss values follow the order of --gpu-power-tuner IDs, not the order of --gpu-id.
+Do not repeat GPU IDs in a per-GPU loss list, and provide exactly as many loss values as tuner IDs.
+--gpu-power-tuner-loss alone does not enable tuning; --gpu-power-tuner must also be present.
+
+What to expect while tuning:
+
+The miner first waits for OC setup, intensity tuning and stable measurements. Tuning may not start immediately.
+Allow roughly 5-20 minutes for tuning; it can take longer if measurements need more time to settle or recovery is needed.
+The miner tests settings, compares hashrate and power, and saves the result when tuning finishes.
+
+Some GPU/OC combinations show no efficiency gain. In that case, the original settings are retained.
+You can try a different stable starting OC or allow a higher loss limit, but an improvement is not guaranteed.
+
+Multiple automatic miner restarts during tuning are normal when GPU recovery succeeds.
+Tuning resumes after the restart until a sufficiently stable result is found or the original settings are restored.
+On a mining OS that manages the miner process, the OS may perform the restart after the miner exits.
+
+Some crashes leave the GPU in a state the miner cannot recover. If recovery fails, a full machine reboot is required.
+If tuning repeatedly fails, reduce the starting core clock and/or core offset before trying again.
+A result that passes tuning can still become unstable after extended mining; a completed tuning run is not a guarantee of long-term stability.
+
+Saved results and later starts:
+
+Results are saved automatically in the Autotune directory under the miner's working directory.
+Keep this directory so the miner can reuse the results.
+
+Keep --gpu-power-tuner enabled on later starts to load the saved result for the same GPU and matching mining/OC settings.
+
+The console reports when tuning finishes and is saved, or when a saved configuration for the current OC is loaded.
+Changes to OC, algorithm, intensity or loss limit can trigger fresh tuning.
+
+If the tuner is skipped or stops, read its console message. Check privileges, GPU selection, the core clock lock and GPU/driver support first.
+Also check that your requested OC was applied successfully and that the GPU is not overheating or being changed by another OC tool.
