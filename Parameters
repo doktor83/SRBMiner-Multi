@@ -82,7 +82,8 @@ Gpu OC parameters
 --gpu-disable-oc                (disable OC functionality)
 --gpu-power-tuner [ids]         (enable NVIDIA power fine-tuning, separate values with ',' [NVIDIA only])
 --gpu-power-tuner-reset [ids]   (delete saved power tuning for current OC; does not enable tuning [NVIDIA only])
---gpu-power-tuner-loss value(s) (allowed hashrate loss %, 1-25, default 2.5, separate values with ',' [NVIDIA only])
+--gpu-power-tuner-value value(s)(apply SRB power values; one for all GPUs or comma-separated in --gpu-id order [NVIDIA only])
+--gpu-power-tuner-loss value(s) (allowed hashrate loss %, 1-25, default 3, separate values with ',' [NVIDIA only])
 --gpu-reset-oc                  (reset default OC values on miner start [NVIDIA only])
 --gpu-cclock0                   (A0 - set fixed core clock (in MHZ), separate values with ',' [NVIDIA only])
 --gpu-mclock0                   (A0 - set fixed memory clock (in MHZ), separate values with ',' [NVIDIA only])
@@ -247,7 +248,7 @@ Simple starting procedure:
 2. Set a conservative fixed core clock and, if used, core offset in your normal mining command. Check that mining is stable.
 3. Add the following options to that command (this example tunes GPU 0, which must be selected for mining):
 
-   --gpu-reset-oc --gpu-power-tuner 0 --gpu-power-tuner-loss 2.5
+   --gpu-reset-oc --gpu-power-tuner 0 --gpu-power-tuner-loss 3
 
 4. Start the miner as root/administrator and let it finish tuning. Do not keep changing the OC during the process.
 5. After tuning finishes, keep mining and check stability over a longer period.
@@ -255,9 +256,9 @@ Simple starting procedure:
 Choose how much hashrate loss is acceptable:
 
 --gpu-power-tuner-loss sets the maximum allowed hashrate loss when choosing the tuning result.
-The range is 1-25%, the default is 2.5%, and decimal values with up to two decimal places are supported. Use a dot for decimals.
+The range is 1-25%, the default is 3%, and decimal values with up to two decimal places are supported. Use a dot for decimals.
 
-For example, if your starting speed is 100 MH/s, a 2.5% limit allows a result around 97.5 MH/s or higher if it improves efficiency.
+For example, if your starting speed is 100 MH/s, a 3% limit allows a result around 97 MH/s or higher if it improves efficiency.
 This is a limit, not a target: the tuner does not have to reduce your hashrate by that amount.
 
 Higher values allow it to consider larger hashrate reductions for potentially greater power savings.
@@ -302,6 +303,26 @@ Keep --gpu-power-tuner enabled on later starts to load the saved result for the 
 The console reports when tuning finishes and is saved, or when a saved configuration for the current OC is loaded.
 Changes to OC, algorithm, intensity or loss limit can trigger fresh tuning.
 Changing the miner version alone does not discard a matching power-tuning result.
+
+Apply a measured value manually:
+
+**Use manual values at your own risk! A value that was optimal for one OC can make the GPU unstable or crash with a different OC, even on the same GPU.**
+
+After each completed tuning step, SRB reports average hashrate, power and efficiency versus your base OC.
+An improved step and the final improved winner include an opaque SRB value in square brackets.
+Copy that value without the brackets to use the measured combination directly:
+
+--gpu-power-tuner-value VALUE
+--gpu-id 0,2 --gpu-power-tuner-value VALUE_FOR_GPU0,VALUE_FOR_GPU2
+
+One value applies to all selected NVIDIA GPUs. A list follows --gpu-id order; without --gpu-id it follows selected NVIDIA device order.
+Manual values override --gpu-power-tuner and --gpu-power-tuner-loss. They do not start an automatic scan or load/overwrite its saved winners.
+
+Manual values are independent of OC, algorithm, loss limit...; the target GPU/driver must support the requested controls.
+Manual values also work with OC configured outside the miner, for example through HiveOS. You do not need to repeat those OC settings in SRB's parameters.
+
+Unlike automatic tuning, manual application does not require a locked core clock.
+If a GPU fault is attributed to an active manual value, SRB recovers the GPU and suspends that value for this recovery session rather than repeating it indefinitely.
 
 Reset saved tuning for the current OC:
 
