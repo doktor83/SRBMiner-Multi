@@ -70,7 +70,6 @@ Gpu parameters
 
 --gpu-id value                  (gpu id/s from --list-devices, separate values with ',')
 --gpu-intensity value           (gpu intensity, 0-31 or if > 31 it's treated as raw intensity, separate values with ',')
---gpu-extra-config value        (additional config for some algorithms, separate values with ',')
 --gpu-off-temperature value     (gpu turn off temperature, separate values with ',')
 --gpu-table-slow-build          (builds DAG/Datatable slower - might help if GPU's are crashing on DAG/Datatable creation)
 --gpu-dual-max-loss value       (how much loss of A0 hashrate is allowed in auto tune mode for optimized dual mining, in percent [1-95])
