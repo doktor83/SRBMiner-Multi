@@ -19,9 +19,7 @@ Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU minin
 ```text
 [0.85%]   [ C  A  -  - ]   argon2d_16000
 [0.85%]   [ C  A  -  - ]   argon2d_dynamic
-[3.00%]   [ C  A  N  - ]   argon2id_exfer
 [1.00%]   [ -  A  N  I ]   autolykos2
-[2.00%]   [ -  A  N  I ]   blake3_an
 [1.00%]   [ -  A  N  I ]   blake3_decred
 [0.85%]   [ C  -  -  - ]   cpupower
 [0.85%]   [ C  A  N  I ]   cryptonight_gpu
@@ -31,7 +29,7 @@ Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU minin
 [0.65%]   [ -  A  N  I ]   ethash
 [0.85%]   [ -  A  N  I ]   evrprogpow
 [0.85%]   [ -  A  N  I ]   firopow
-[0.85%]   [ -  A  N  I ]   fishhash
+[0.00%]   [ -  A  N  I ]   fishhash
 [2.00%]   [ C  -  -  - ]   flex
 [0.85%]   [ C  -  -  - ]   ghostrider
 [0.85%]   [ -  A  N  I ]   heavyhash
@@ -65,7 +63,6 @@ Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU minin
 [0.85%]   [ C  -  -  - ]   randomzqvx
 [1.00%]   [ C  -  -  - ]   rinhash
 [1.00%]   [ -  A  N  I ]   sha256d_csd
-[1.00%]   [ -  A  N  I ]   sha3t
 [1.00%]   [ -  A  N  I ]   verthash
 [0.85%]   [ C  -  -  - ]   verushash
 [1.50%]   [ C  A  N  I ]   xelishashv3
