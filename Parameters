@@ -79,23 +79,25 @@ Gpu parameters
 Gpu OC parameters
 
 --gpu-disable-oc                (disable OC functionality)
---gpu-power-tuner [ids]         (enable NVIDIA power fine-tuning, separate values with ',' [NVIDIA only])
---gpu-power-tuner-reset [ids]   (delete saved power tuning for current OC; does not enable tuning [NVIDIA only])
---gpu-power-tuner-value value(s)(apply SRB power values; one for all GPUs or comma-separated in --gpu-id order [NVIDIA only])
---gpu-power-tuner-loss value(s) (allowed hashrate loss %, 1-25, default 3, separate values with ',' [NVIDIA only])
---gpu-reset-oc                  (reset default OC values on miner start [NVIDIA only])
---gpu-cclock0                   (A0 - set fixed core clock (in MHZ), separate values with ',' [NVIDIA only])
---gpu-mclock0                   (A0 - set fixed memory clock (in MHZ), separate values with ',' [NVIDIA only])
+--gpu-power-tuner [ids]         (enable GPU power fine-tuning, separate values with ',' [NVIDIA; AMD RDNA])
+--gpu-power-tuner-reset [ids]   (delete saved power tuning for current OC; does not enable tuning [NVIDIA; AMD RDNA])
+--gpu-power-tuner-value value(s)(apply SRB power values; one for all GPUs or comma-separated in --gpu-id order; 0 leaves a GPU unchanged [NVIDIA; AMD RDNA])
+--gpu-power-tuner-loss value(s) (allowed hashrate loss %, 1-25, default 3, separate values with ',' [NVIDIA; AMD RDNA])
+--gpu-reset-oc                  (reset default OC values on startup and normal exit [NVIDIA; AMD RDNA])
+--gpu-cclock0                   (A0 - set fixed core clock (in MHZ), separate values with ',' [NVIDIA; AMD RDNA])
+--gpu-mclock0                   (A0 - memory clock in MHz, separate values with ',' [NVIDIA; AMD RDNA])
 --gpu-coffset0                  (A0 - set core clock offset (in MHZ), separate values with ',' [NVIDIA only])
+--gpu-vddc-offset0              (A0 - core voltage offset, -500..0 mV; 0 skips; comma-separated per-GPU values [NVIDIA; AMD RDNA])
 --gpu-moffset0                  (A0 - set memory clock offset (in MHZ), separate values with ',' [NVIDIA only])
---gpu-plimit0                   (A0 - set power management limit (in W), separate values with ',' [NVIDIA only])
---gpu-fan0                      (A0 - set fan speed (in %), separate values with ',' [NVIDIA only])
---gpu-cclock1                   (A1 - set fixed core clock (in MHZ), separate values with ',' [NVIDIA only])
---gpu-mclock1                   (A1 - set fixed memory clock (in MHZ), separate values with ',' [NVIDIA only])
+--gpu-plimit0                   (A0 - set power management limit (in W), separate values with ',' [NVIDIA; AMD RDNA])
+--gpu-fan0                      (A0 - set fan speed (in %), separate values with ',' [NVIDIA; AMD RDNA])
+--gpu-cclock1                   (A1 - set fixed core clock (in MHZ), separate values with ',' [NVIDIA; AMD RDNA])
+--gpu-mclock1                   (A1 - memory clock in MHz, separate values with ',' [NVIDIA; AMD RDNA])
 --gpu-coffset1                  (A1 - set core clock offset (in MHZ), separate values with ',' [NVIDIA only])
+--gpu-vddc-offset1              (A1 - core voltage offset, -500..0 mV; 0 skips; comma-separated per-GPU values [NVIDIA; AMD RDNA])
 --gpu-moffset1                  (A1 - set memory clock offset (in MHZ), separate values with ',' [NVIDIA only])
---gpu-plimit1                   (A1 - set power management limit (in W), separate values with ',' [NVIDIA only])
---gpu-fan1                      (A1 - set fan speed (in %), separate values with ',' [NVIDIA only])
+--gpu-plimit1                   (A1 - set power management limit (in W), separate values with ',' [NVIDIA; AMD RDNA])
+--gpu-fan1                      (A1 - set fan speed (in %), separate values with ',' [NVIDIA; AMD RDNA])
 --a0-oc-script filename         (run script when algorithm 0 becomes active - set OC)
 --a1-oc-script filename         (run script when algorithm 1 becomes active - set OC)
 --oc-coffset-delayed            (apply cclock and coffset delayed [NVIDIA only])
@@ -126,6 +128,12 @@ Parameter aliases
 --password                      -p
 --pool                          -o
 --wallet                        -u
+--gpu-cclock                    --gpu-cclock0
+--gpu-mclock                    --gpu-mclock0
+--gpu-coffset                   --gpu-coffset0
+--gpu-moffset                   --gpu-moffset0
+--gpu-plimit                    --gpu-plimit0
+--gpu-fan                       --gpu-fan0
 
 
 : Separate algorithms with ; and values inside an algorithm with ,
@@ -135,11 +143,177 @@ Parameter aliases
 Note:
 If you want to apply different values for GPU's (OC or any other parameter that sets some GPU value), you need to specify the GPU's you are using with '--gpu-id' parameter.
 For example:
-... --gpu-id 0,1,2,3,4 --gpu-intensity 100,200,300,400,500 --gpu-cclock 1300,1400,1500,1600
+... --gpu-id 0,1,2,3,4 --gpu-intensity 100,200,300,400,500 --gpu-cclock 1300,1400,1500,1600,1700
 
 Mixed CPU/GPU mining:
 Order of parameters matters!
 If you define --algorithm-cpu first then the first occurences of --pool, --wallet ... etc will be used for the algorithm defined in first --algorithm-cpu
+
+==================================================================================================================
+
+GPU overclocking (OC)
+
+Run the miner as root on Linux or as administrator on Windows to apply OC.
+NVIDIA OC is available on Linux and Windows, subject to GPU and driver support.
+AMD OC currently supports RDNA 1, 2, 3 and 4 on Linux only. The miner detects the available controls and their ranges;
+an unavailable or unrecognized control is reported as unsupported. Support is checked per control and per GPU.
+
+Manual controls (the same vendor support applies to both A0 and A1):
+
+| Parameter         | NVIDIA                           | AMD RDNA 1-4 on Linux              |
+|-------------------|----------------------------------|------------------------------------|
+| --gpu-cclock      | Request fixed core clock, MHz    | Lock core clock, MHz (RDNA1-4)     |
+| --gpu-mclock      | Request fixed memory clock, MHz  | Lock memory clock, controller MHz  |
+| --gpu-coffset     | Signed core clock offset, MHz    | Unavailable                        |
+| --gpu-vddc-offset | Negative core voltage offset, mV | Negative core voltage offset, mV   |
+| --gpu-moffset     | Signed memory clock offset, MHz  | Unavailable                        |
+| --gpu-plimit      | Absolute power limit, watts      | Absolute power limit, watts        |
+| --gpu-fan         | Fan speed, percent               | Fan speed, percent                 |
+
+NVIDIA --gpu-vddc-offset requires a locked core clock.
+
+Automatic power tuning, profile reset and loss limits support NVIDIA and Linux AMD RDNA GPUs.
+--gpu-power-tuner-value takes an SRB power value, not watts; see "Efficiency fine-tuner" below for these options.
+Use --gpu-plimit to set a limit in watts on either supported vendor.
+
+A0/A1 profiles and per-GPU values:
+
+- A0 is the normal startup OC profile for every algorithm. The unsuffixed options and their 0 aliases are equivalent:
+  --gpu-mclock 875 means the same as --gpu-mclock0 875. The same rule applies to cclock, coffset, vddc-offset, moffset, plimit and fan.
+- Use the 1 suffix for the second algorithm's profile in EpicCash switching mode, for example --gpu-mclock1 and --gpu-plimit1.
+  This mode requires progpow_epic or randomepic as algorithm 0 and a second algorithm configured.
+  Ordinary simultaneous dual mining uses A0. Changing profiles does not perform a full factory OC reset.
+- One value applies to all selected GPUs. For different values, select the devices with --gpu-id and provide a
+  comma-separated list in that exact order, with one entry per GPU. IDs come from --list-devices.
+- To skip one GPU in a clock/offset list, use -9999. Use 0 to skip a power-limit entry, and -1 to skip a fan entry.
+  Skipping an entry leaves that particular request unapplied; it does not request a factory reset.
+- Voltage offsets use 0 to skip an entry. The -9999 sentinel does not apply to voltage offsets.
+
+Core and memory clocks: same command and MHz unit, different driver values:
+
+NVIDIA uses its driver's memory-clock values and normally requests a fixed clock. Supported values depend on the GPU
+and driver; an unsupported value is reported in the console/log with the supported values when available.
+The low-memory requests 405 and 810 MHz also depend on GPU/driver support; they are not AMD presets.
+
+AMD RDNA --gpu-cclock sets the core minimum and maximum to the requested driver MHz.
+The miner detects the editable range, rejects unsupported values with the range in console/log, and verifies
+committed limits and active clock readings when the GPU is busy.
+Measured AMD clocks can differ by a few percent from the nominal driver setting.
+
+AMD uses the memory-controller MHz exposed by its Linux driver. For GDDR6, 875 controller MHz corresponds to a
+1750 MHz memory clock / 14 Gbps data rate.
+The miner passes controller MHz directly; it does not convert 1750 into 875 for you. Use each GPU's supported values.
+
+AMD --gpu-mclock locks one of the memory states exposed by the driver.
+It accepts the listed controller MHz values. Unsupported requests are rejected with the available values in both console and log.
+
+Sensors may show small variations around a nominal clock. A failed apply restores the previous known memory policy.
+Ordinary memory locking does not change the OverDrive clock/voltage table, power cap or fan settings.
+
+Power-limit requests use the detected driver limits and may be clamped to them; --gpu-plimit is an absolute watt
+limit, not a percentage or an offset from stock power.
+
+Fan speed: the same percentage unit on NVIDIA and AMD:
+
+--gpu-fan 60 requests 60% fan speed. Values are percentages, not RPM.
+--gpu-reset-oc restores automatic fan control as part of the existing startup/exit reset.
+
+Reset, zero values and exit behavior:
+
+- --gpu-reset-oc requests factory OC defaults before applying A0 on startup, and again on normal exit/restart.
+  It applies to selected NVIDIA and supported AMD RDNA GPUs.
+- Without --gpu-reset-oc, the miner does not request a full factory OC reset on exit.
+  --gpu-disable-oc disables built-in OC, A0/A1 OC scripts and power tuning, including the --gpu-reset-oc request.
+
+- --gpu-cclock 0 and --gpu-mclock 0 reset that clock control. NVIDIA clock offsets use 0 to set the offset to zero.
+- AMD --gpu-mclock 0 releases the memory lock without a full reset.
+
+- AMD --gpu-cclock 0 restores the captured core range, keeping a memory lock applied by the miner in place.
+
+- --gpu-plimit 0 leaves power unchanged; it does not restore stock power. Use --gpu-reset-oc for a factory power reset.
+- --gpu-vddc-offset 0 leaves voltage unchanged. Use --gpu-reset-oc to reset voltage as part of the full OC reset.
+- --gpu-fan 0 requests a stopped fan where supported by the GPU's control/range. --gpu-fan -1 skips the fan request.
+
+Other OC controls:
+
+--a0-oc-script / --a1-oc-script run a script when the corresponding profile is applied, after the built-in OC requests.
+They can be used with either vendor. The miner's factory reset does not undo arbitrary changes made by a script.
+
+--oc-delay adds a pause after applying a profile: default 3 seconds, maximum 120, and 0 disables the pause.
+--oc-coffset-delayed is NVIDIA only: it defers A0 cclock/coffset application until GPU work has started.
+It also defers A0 voltage offsets until that core OC stage.
+--gpu-disable-oc turns off these A0/A1 OC actions as well as the manual controls and power tuner.
+
+Core voltage offset (NVIDIA on Linux/Windows; AMD RDNA on Linux):
+
+--gpu-vddc-offset accepts integer values from -500 to 0 mV. For example, -50 requests a 50 mV reduction;
+positive values are rejected. Zero skips the request, including when switching A0/A1 profiles.
+
+Every supported NVIDIA GPU requires a fixed core clock lock, set through --gpu-cclock or another tool, before applying
+a negative voltage offset. Automatic clocks, a core offset alone, and clock ranges with different minimum/maximum values do not satisfy this requirement.
+
+Zero still skips the voltage request without checking the lock.
+
+Voltage limits can also reduce the actual operating core clock. If a core clock change cannot retain the active
+voltage offset, that change is rejected and the preceding core/voltage settings are restored.
+
+A full --gpu-reset-oc clears voltage before resetting the remaining OC controls.
+
+This control is separate from --gpu-coffset, which changes frequency in MHz. Do not combine a manual voltage
+offset with --gpu-power-tuner or --gpu-power-tuner-value on the same NVIDIA GPU.
+Zero entries in --gpu-power-tuner-value leave that GPU available for manual voltage control.
+To mix automatic tuning and manual voltage offsets, specify the tuner GPU IDs explicitly and use 0 for their
+voltage-offset entries. Bare --gpu-power-tuner selects all eligible NVIDIA and Linux AMD RDNA GPUs selected for mining.
+
+Examples (append these options to your normal mining command):
+
+These values illustrate syntax, not universal OC presets. Choose supported settings for your own GPU and driver.
+
+1. NVIDIA GPU 0: fixed clocks, core offset, a watt limit and manual fan speed:
+
+   --gpu-id 0 --gpu-cclock 1600 --gpu-mclock 5001 --gpu-coffset 100 --gpu-plimit 150 --gpu-fan 60 --gpu-reset-oc
+
+2. NVIDIA GPU 0: use clock offsets instead of specifying fixed clocks:
+
+   --gpu-id 0 --gpu-coffset 100 --gpu-moffset 500 --gpu-plimit 150 --gpu-reset-oc
+
+3. AMD RX 5700 XT at GPU 0: core locked at 1500 MHz, memory at 875 controller MHz and a 150 W cap:
+
+   --gpu-id 0 --gpu-cclock 1500 --gpu-mclock 875 --gpu-plimit 150 --gpu-reset-oc
+
+4. AMD RX 5700 XT at GPU 0 in EpicCash switching mode with a fallback algorithm: separate A0/A1 memory locks and watt limits:
+
+   --gpu-id 0 --gpu-mclock0 875 --gpu-plimit0 150 --gpu-mclock1 625 --gpu-plimit1 160 --gpu-reset-oc
+
+5. Mixed Linux rig: GPU 0 is NVIDIA; GPU 1 is RX 5700 XT. Each GPU gets its own memory-clock value.
+   The -9999 entries skip the AMD core lock and unsupported core offset; both GPUs use fan percentages:
+
+   --gpu-id 0,1 --gpu-cclock 1600,-9999 --gpu-mclock 5001,875 --gpu-coffset 100,-9999 --gpu-plimit 150,150 --gpu-fan 60,65 --gpu-reset-oc
+
+6. AMD RDNA GPU 0: request -50 mV, with a full OC reset on startup and normal exit:
+
+   --gpu-id 0 --gpu-vddc-offset -50 --gpu-reset-oc
+
+7. NVIDIA GPU 0: the required fixed core clock lock and -25 mV:
+
+   --gpu-id 0 --gpu-cclock 1305 --gpu-vddc-offset -25 --gpu-reset-oc
+
+8. AMD RDNA GPUs, selected GPU order 2,0: A0 requests -25 mV only on GPU2; A1 requests -50/-25 mV respectively:
+
+   --gpu-id 2,0 --gpu-vddc-offset0 -25,0 --gpu-vddc-offset1 -50,-25
+
+9. NVIDIA GPUs 0,1,2,3,5: automatically tune GPUs 0 and 1; request -50 mV manually on GPUs 2, 3 and 5:
+
+   --gpu-id 0,1,2,3,5 --gpu-cclock 1305 --gpu-power-tuner 0,1 --gpu-vddc-offset 0,0,-50,-50,-50 --gpu-reset-oc
+
+   The voltage-offset list follows --gpu-id order. Its first two zeros skip manual voltage requests on the tuned GPUs.
+
+10. NVIDIA GPUs 0,1: apply a measured SRB power value on GPU 0 and request -50 mV manually on GPU 1:
+
+   --gpu-id 0,1 --gpu-cclock 1305 --gpu-power-tuner-value VALUE_FOR_GPU0,0 --gpu-vddc-offset 0,-50 --gpu-reset-oc
+
+   Replace VALUE_FOR_GPU0 with the SRB value copied from a completed tuning step. The zero power-value entry leaves
+   GPU 1 available for manual voltage control. This example applies values directly; it does not run an automatic scan.
 
 ==================================================================================================================
 
@@ -195,7 +369,7 @@ This should be a unique string, which accessed in browser restarts SRBMiner-MULT
 
 
 ==================================================================================================================
-Efficiency fine-tuner (Linux / Windows, NVIDIA; root / administrator required):
+Efficiency fine-tuner (NVIDIA on Linux / Windows; AMD RDNA on Linux; root / administrator required):
 
 The power tuner tries to reduce power consumption while keeping as much of your hashrate as possible.
 It fine-tunes your existing OC (overclock settings) and chooses a result based on hashrate per watt.
@@ -207,8 +381,9 @@ Before you start:
 
 - Use a supported NVIDIA GPU and driver. Unsupported GPU/driver combinations are skipped.
   NVIDIA driver 595 or 615 is recommended.
+- AMD RDNA 1-4 on Linux requires writable driver voltage controls and working power telemetry.
 - On Linux, run the miner as root. On Windows, run it as administrator.
-- A fixed/locked core clock is required, for example through --gpu-cclock.
+- On NVIDIA, a fixed/locked core clock is required, for example through --gpu-cclock.
   GPUs using automatic/stock core clocks are skipped. Setting only --gpu-coffset is not enough to lock the core clock.
 - Use one mining algorithm and one mining thread per GPU. Multiple algorithms or multiple mining threads on a GPU are not supported by the tuner.
 - Keep GPU mining and OC control enabled. --gpu-disable-oc disables the power tuner.
@@ -234,7 +409,7 @@ Use the GPU IDs shown by --list-devices. These GPUs must also be selected for mi
 --gpu-id chooses which GPUs mine; --gpu-power-tuner chooses which of those GPUs are tuned.
 Selecting a GPU for tuning does not automatically select it for mining.
 
---gpu-power-tuner               Tune all eligible NVIDIA GPUs selected for mining.
+--gpu-power-tuner               Tune all eligible NVIDIA and Linux AMD RDNA GPUs selected for mining.
 --gpu-power-tuner 1             Tune GPU 1 only.
 --gpu-power-tuner 0,2           Tune GPUs 0 and 2 only.
 
@@ -313,19 +488,23 @@ Copy that value without the brackets to use the measured combination directly:
 
 --gpu-power-tuner-value VALUE
 --gpu-id 0,2 --gpu-power-tuner-value VALUE_FOR_GPU0,VALUE_FOR_GPU2
+--gpu-id 0,1,2 --gpu-power-tuner-value VALUE_FOR_GPU0,0,0
 
-One value applies to all selected NVIDIA GPUs. A list follows --gpu-id order; without --gpu-id it follows selected NVIDIA device order.
+One value applies to all selected supported GPUs. A list follows --gpu-id order; without --gpu-id it follows selected supported device order.
+Use 0 for no adjustment on that GPU. In the last example all three GPUs mine, but only GPU0 gets a manual adjustment; GPU1 and GPU2 do not print a manual-value-applied message. A single 0 leaves all selected GPUs unchanged.
 Manual values override --gpu-power-tuner and --gpu-power-tuner-loss. They do not start an automatic scan or load/overwrite its saved winners.
+The GPU IDs supplied to --gpu-power-tuner do not select GPUs for manual values.
 
 Manual values are independent of OC, algorithm, loss limit...; the target GPU/driver must support the requested controls.
 Manual values also work with OC configured outside the miner, for example through HiveOS. You do not need to repeat those OC settings in SRB's parameters.
 
-Unlike automatic tuning, manual application does not require a locked core clock.
+Manual application does not require a locked core clock. AMD values must contain only a whole-millivolt voltage adjustment;
+values requiring NVIDIA-only controls cannot be applied to AMD.
 If a GPU fault is attributed to an active manual value, SRB recovers the GPU and suspends that value for this recovery session rather than repeating it indefinitely.
 
 Reset saved tuning for the current OC:
 
---gpu-power-tuner-reset         Delete the current OC profile for all NVIDIA GPUs selected for mining.
+--gpu-power-tuner-reset         Delete the current OC profile for all supported GPUs selected for mining.
 --gpu-power-tuner-reset 0,2     Delete the current OC profiles for GPU 0 and GPU 2 only.
 
 Use the same algorithm, OC, intensity and loss settings as the saved profile you want to reset.
