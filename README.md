@@ -6,7 +6,7 @@ Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU minin
 
 ## DOWNLOAD
 
-- [Official website](https://www.srbminer.com/download.html)
+- [Official website](https://www.srbminer.com)
 - [GitHub repository](https://github.com/doktor83/SRBMiner-Multi)
 
 ## ALGORITHMS
