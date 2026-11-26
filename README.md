@@ -38,6 +38,7 @@ Cryptocurrency miner supporting AMD, NVIDIA and Intel GPUs, as well as CPU minin
 [0.85%]   [ -  A  N  I ]   meowpow
 [0.85%]   [ C  -  -  - ]   mike
 [0.85%]   [ C  -  -  - ]   minotaurx
+[1.50%]   [ -  -  N  - ]   neb
 [2.00%]   [ -  A  N  - ]   noid
 [0.85%]   [ -  A  N  I ]   oggpow
 [0.85%]   [ C  -  -  - ]   panthera
