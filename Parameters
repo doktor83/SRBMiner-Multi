@@ -27,6 +27,7 @@ Generic parameters:
 --give-up-limit value           (number of times to try connecting to a pool before switching to the next pool)
 --gpu-errors-alert value        (notify when number of result validation errors for any GPU reaches this value [def. is 0 - disabled])
 --gpu-sensors-disable           (disable reading of GPU sensors)
+--hashrate-report-interval value(seconds between automatic hashrate reports, min. 10s)
 --list-algorithms               (list available algorithms)
 --list-devices                  (list available gpu devices)
 --log-file filename             (enable logging to file)
